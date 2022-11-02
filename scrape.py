@@ -8,7 +8,7 @@ import time
 
 def scrape():
     executable_path = {'executable_path': ChromeDriverManager().install()}
-    browser = Browser('chrome', **executable_path, headless=False)
+    browser = Browser('chrome', **executable_path, headless=True)
     articles = {}
     url = "https://philpapers.org/browse/top-level-ontologies"
     browser.visit(url)
@@ -46,6 +46,6 @@ def scrape():
 
     browser.quit()
         
-    return entries
+    print(entries)
     
     
