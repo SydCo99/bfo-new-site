@@ -5,12 +5,17 @@ from splinter import Browser
 from bs4 import BeautifulSoup
 from webdriver_manager.chrome import ChromeDriverManager
 import time
+import re
+
+def striphtml(data):
+    p = re.compile(r'<.*?>')
+    return p.sub('', data)
+    
 
 def scrape():
     executable_path = {'executable_path': ChromeDriverManager().install()}
-    browser = Browser('chrome', **executable_path, headless=False)
-    articles = {}
-    url = "https://philpapers.org/browse/top-level-ontologies"
+    browser = Browser('chrome', **executable_path, headless=True)
+    url = "https://philpapers.org/browse/top-level-ontologies?limit=50&newWindow=&publishedOnly=&freeOnly=&catq=barry+smith&hideAbstracts=&langFilter=&filterByAreas=&sqc=&proOnly=on&uncat=&cn=top-level-ontologies&onlineOnly=&cId=492826&categorizerOn=&new=1&start=0&setAside=&sort=pubYear&showCategories=on&format=html&jlist=&ap_c1=&ap_c2="
     browser.visit(url)
     time.sleep(1)
     html = browser.html
@@ -19,23 +24,45 @@ def scrape():
     html = []  
     for i in range(len(full_citation_list)):
         html.append(full_citation_list[i])
-    authors = []
+    author_full = []
     titles = []
     pub_date = []
     pub_info = []
     links = []
+    authors = []
+    titles_full = []
+    pub_info_full = []
 
     for entry in html: 
-        #for hit in entry.find_all("span", class_="name"): 
-            #authors.append(hit.contents[0].strip())
-        # for author in entry.find_all("span", class_="name"):
-        #     authors.append(''.join(author.findAll(text=True)))
-        authors.append(entry.find_all("span", class_="name"))
-        titles.append(entry.find("span", class_="articleTitle").text)
+        author_full.append(entry.find_all("span", class_="name"))
+        titles_full.append(entry.find("span", class_="articleTitle").text)
         pub_date.append(entry.find("span", class_="pubYear").text)
-        pub_info.append(entry.find("span", class_="pubInfo").text)
+        pub_info_full.append(entry.find("span", class_="pubInfo").text)
         link = entry.find("a", href=True)
         links.append("https://philpapers.org" + link["href"])
+        
+    for i in range(len(pub_info_full)): 
+        line = pub_info_full[i]
+        line = line.replace('.','')
+        pub_info.append(line)
+        i += 1
+    for i in range(len(titles_full)): 
+        line = titles_full[i]
+        line = line.replace('.','')
+        titles.append(line)
+        i += 1
+
+    author_full = list(map(str, author_full))
+    for i in range(len(author_full)): 
+        line = striphtml(author_full[i])
+        line = line.replace(', ', ',')
+        line = line.replace(' ]', ']')
+
+        authors.append(line)
+        i += 1
+
+    for i in range(len(authors)):
+        authors[i] = authors[i].strip('][').split(',')
         
     entries = []
 
@@ -43,7 +70,90 @@ def scrape():
         case = {"author": authors[publication], "title": titles[publication], "pub_date": pub_date[publication],
                 "pub_info": pub_info[publication], "links": links[publication]}
         entries.append(case)
+   
+
+    browser.quit()
+    
+    time.sleep(1)
+    
+    #start of scilit scraper 
+    executable_path = {'executable_path': ChromeDriverManager().install()}
+    browser = Browser('chrome', **executable_path, headless=False)
+    
+    url = "https://www.scilit.net/articles/search?facets__language%5B0%5D=English&highlight=1&q=%22basic%20formal%20ontology%22&sort=Newest&nb_articles=500"
+    browser.visit(url)
+    time.sleep(1)
+    html = browser.html
+    soup = BeautifulSoup(html, "html.parser")
+    full_citation_list = soup.find_all("div", class_="result")
+    
+    html = []  
+    for i in range(len(full_citation_list)):
+        html.append(full_citation_list[i])
         
-    return entries
+    authors = []
+    titles = []
+    titles_full = []
+    pub_date = []
+    pub_info = []
+    links = []
+    author_full = []
+    pub_date_full = []
+    pub_info_full = []
+    links_full = []
+
+    for entry in html: 
+        author_full.append(entry.find_all("div", class_="authors"))
+        titles_full.append(entry.find("div", class_="title").text)
+        pub_date_full.append(entry.find("div", class_="pubdate").text)
+        pub_info_full.append(entry.find("div", class_="publisher"))
+        #links.append(entry.find("div", class_="doilink"))
+        link = entry.find("a", href=True)
+        links_full.append(link)    
+        
+    for i in range(len(links_full)):
+        link = links_full[i]["href"]
+        links.append("https://www.scilit.net"+ link)
+        i =+ 1
+        
+    pub_info_full = list(map(str, pub_info_full))
+    for i in range(len(pub_info_full)):
+        line = striphtml(pub_info_full[i])
+        line = line.replace('by\n', '')
+        line = line.replace('\n', '')
+        pub_info.append(line)
+        i += 1
+    for i in range(len(pub_date_full)):
+        line = pub_date_full[i]
+        line = line.replace('Published: ', '')
+        pub_date.append(line)
+        i += 1
+        
+    for i in range(len(titles_full)):
+        line = titles_full[i]
+        line = line.replace('\n', '')
+        titles.append(line)
+        i += 1
+    author_full = list(map(str, author_full))
+    for i in range(len(author_full)): 
+        line = striphtml(author_full[i])
+        line = line.replace('\n', '')
+        line = line.replace(', ', ',')
+        line = line.replace(' ]', ']')
+
+        authors.append(line)
+        i += 1
+
+    for i in range(len(authors)):
+        authors[i] = authors[i].strip('][').split(',')
+        
+    for publication in range(len(titles)):
+        case = {"author": authors[publication], "title": titles[publication], "pub_date": pub_date[publication],
+                "pub_info": pub_info[publication], "links": links[publication]}
+        entries.append(case)
+        
+    browser.quit()
+    print(f"length of entries list is: {len(entries)}")
+    print(entries)
     
     
