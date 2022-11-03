@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, jsonify
 import scrape
 
 app = Flask(__name__, static_folder = "assets")
@@ -14,7 +14,7 @@ def index():
 @app.route("/scrape")
 def scraper():
     new_papers = scrape.scrape()
-    
+    new_papers = jsonify(new_papers)
     return redirect("/", code=302)
 
 if __name__ == "__main__":

@@ -258,3 +258,15 @@
   new PureCounter();
 
 })()
+
+fetch('http://127.0.0.1:5000/scrape')
+.then(response => response.json())
+.then(data => console.log(data));
+
+var $records = $(fetch('http://127.0.0.1:5000/scrape')),
+    myRecords = JSON.parse($records.text());
+$('#my-final-table').dynatable({
+  dataset: {
+    records: myRecords
+  }
+});

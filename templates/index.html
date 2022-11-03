@@ -30,6 +30,8 @@
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
   <!-- =======================================================
   * Template Name: Lumia - v4.9.1
   * Template URL: https://bootstrapmade.com/lumia-bootstrap-business-template/
@@ -696,36 +698,27 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>What We Do</h2>
-          <p>Magnam dolores commodi suscipit consequatur ex aliquid</p>
+          <h2>Recent Publications</h2>
+          <p>Filler space for explanation</p>
         </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Sed ut perspiciatis</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div>
-
-        </div>
+        {% for entry in new_papers %}
+        <table id="my-final-table">
+          <tr>
+            <th>Author</th>
+            <th>Title</th>
+            <th>Pub Date</th>
+            <th>Pub Info</th>
+            <th>Link</th>
+          </tr>
+          <tr>
+            <td>{{ new_papers.author }}</td>
+            <td>{{ new_papers.title }}</td>
+            <td>{{ new_papers.pub_date }}</td>
+            <td>{{ new_papers.pub_info }}</td>
+            <td>{{ new_papers.links }}</td>
+          </tr>
+        </table>
+        {% endfor %}
 
       </div>
     </section><!-- End What We Do Section -->
