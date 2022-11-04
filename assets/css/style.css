@@ -484,14 +484,14 @@ section {
 /*--------------------------------------------------------------
 # What We Do
 --------------------------------------------------------------*/
-.what-we-do .icon-box {
+.whats-new .icon-box {
   text-align: center;
   padding: 30px 20px;
   transition: all ease-in-out 0.3s;
   background: #fff;
 }
 
-.what-we-do .icon-box .icon {
+.whats-new .icon-box .icon {
   margin: 0 auto;
   width: 64px;
   height: 64px;
@@ -504,35 +504,35 @@ section {
   transition: ease-in-out 0.3s;
 }
 
-.what-we-do .icon-box .icon i {
+.whats-new .icon-box .icon i {
   color: #3498db;
   font-size: 28px;
 }
 
-.what-we-do .icon-box h4 {
+.whats-new .icon-box h4 {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 24px;
 }
 
-.what-we-do .icon-box h4 a {
+.whats-new .icon-box h4 a {
   color: #384046;
   transition: ease-in-out 0.3s;
 }
 
-.what-we-do .icon-box p {
+.whats-new .icon-box p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
 }
 
-.what-we-do .icon-box:hover {
+.whats-new .icon-box:hover {
   border-color: #fff;
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
 }
 
-.what-we-do .icon-box:hover h4 a,
-.what-we-do .icon-box:hover .icon i {
+.whats-new .icon-box:hover h4 a,
+.whats-new .icon-box:hover .icon i {
   color: #3498db;
 }
 

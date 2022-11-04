@@ -14,7 +14,7 @@ def striphtml(data):
 
 def scrape():
     executable_path = {'executable_path': ChromeDriverManager().install()}
-    browser = Browser('chrome', **executable_path, headless=True)
+    browser = Browser('chrome', **executable_path, headless=False)
     url = "https://philpapers.org/browse/top-level-ontologies?limit=50&newWindow=&publishedOnly=&freeOnly=&catq=barry+smith&hideAbstracts=&langFilter=&filterByAreas=&sqc=&proOnly=on&uncat=&cn=top-level-ontologies&onlineOnly=&cId=492826&categorizerOn=&new=1&start=0&setAside=&sort=pubYear&showCategories=on&format=html&jlist=&ap_c1=&ap_c2="
     browser.visit(url)
     time.sleep(1)
@@ -55,7 +55,7 @@ def scrape():
     author_full = list(map(str, author_full))
     for i in range(len(author_full)): 
         line = striphtml(author_full[i])
-        line = line.replace(', ', ',')
+        #line = line.replace(', ', ',')
         line = line.replace(' ]', ']')
 
         authors.append(line)
@@ -64,14 +64,25 @@ def scrape():
     for i in range(len(authors)):
         authors[i] = authors[i].strip('][').split(',')
         
-    entries = []
+    phil_authors = []
+    phil_titles = []
+    phil_pub_date = []
+    phil_pub_info = []
+    phil_links = []
+    
+    phil_authors = authors
+    phil_titles = titles 
+    phil_pub_date = pub_date 
+    phil_pub_info = pub_info 
+    phil_links = links 
+        
+#     entries = []
 
-    for publication in range(len(titles)):
-        case = {"author": authors[publication], "title": titles[publication], "pub_date": pub_date[publication],
-                "pub_info": pub_info[publication], "links": links[publication]}
-        entries.append(case)
+#     for publication in range(len(titles)):
+#         case = {"author": authors[publication], "title": titles[publication], "pub_date": pub_date[publication],
+#                 "pub_info": pub_info[publication], "links": links[publication]}
+#         entries.append(case)
    
-
     browser.quit()
     
     time.sleep(1)
@@ -138,7 +149,7 @@ def scrape():
     for i in range(len(author_full)): 
         line = striphtml(author_full[i])
         line = line.replace('\n', '')
-        line = line.replace(', ', ',')
+        #line = line.replace(', ', ',')
         line = line.replace(' ]', ']')
 
         authors.append(line)
@@ -147,13 +158,33 @@ def scrape():
     for i in range(len(authors)):
         authors[i] = authors[i].strip('][').split(',')
         
-    for publication in range(len(titles)):
-        case = {"author": authors[publication], "title": titles[publication], "pub_date": pub_date[publication],
-                "pub_info": pub_info[publication], "links": links[publication]}
-        entries.append(case)
+    for x in phil_authors:
+    authors.append(x)
+    for x in phil_titles:
+        titles.append(x)
+    for x in phil_pub_date:
+        pub_date.append(x)
+    for x in phil_pub_info:
+        pub_info.append(x)
+    for x in phil_links: 
+        links.append(x)
+        
+    articles = {}
+    articles["Authors"] = authors
+    articles["Title"] = titles
+    articles["Date"] = pub_date
+    articles["Publication"] = pub_info
+    articles["Link"] = links
+        
+    # for publication in range(len(titles)):
+    #     case = {"author": authors[publication], "title": titles[publication], "pub_date": pub_date[publication],
+    #             "pub_info": pub_info[publication], "links": links[publication]}
+    #     entries.append(case)
         
     browser.quit()
-    print(f"length of entries list is: {len(entries)}")
-    print(entries)
+    # print(f"length of entries list is: {len(entries)}")
+    # print(entries)
+
+    return articles
     
     

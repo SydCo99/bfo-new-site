@@ -30,6 +30,10 @@
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
 
+  <!-- data tables-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- =======================================================
@@ -60,6 +64,7 @@
           <li><a class="nav-link scrollto " href="#portfolio">Publications</a></li>
           <li><a class="nav-link scrollto" href="#testimonials">FOL</a></li>
           <li><a class="nav-link scrollto" href = "#team"><span>Team</span></a></li>
+          <li><a class="nav-link scrollto" href = "#whats-new"><span>What's New</span></a></li>
           <li><a class="nav-link scrollto" href="https://mitpress.mit.edu/9780262527811/building-ontologies-with-basic-formal-ontology/">Guidebook</a></li>
           <li><a class="nav-link scrollto" href="https://github.com/bfo-ontology/BFO/wiki">Github</a></li>
         </ul>
@@ -78,7 +83,7 @@
     <div class="container text-center text-md-left" data-aos="fade-up">
       <h1><span>Basic Formal Ontology (BFO)</span></h1>
       <h2>A Genuine Upper-Level Ontology</h2>
-      <a href="/scrape" class="btn-get-started scrollto">What's New?</a>
+      <a href="#whats-new" class="btn-get-started scrollto">What's New?</a>
     </div>
   </section><!-- End Hero -->
 
@@ -694,31 +699,13 @@
     </section><!-- End Team Section -->
 
     <!-- ======= What We Do Section ======= -->
-    <section id="what-we-do" class="what-we-do">
+    <section id="whats-new" class="whats-new">
       <div class="container">
-
-        <div class="section-title">
+        <div class = "section-title"> 
           <h2>Recent Publications</h2>
-          <p>Filler space for explanation</p>
+          <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape for New Data!</a></p>
         </div>
-        {% for entry in new_papers %}
-        <table id="my-final-table">
-          <tr>
-            <th>Author</th>
-            <th>Title</th>
-            <th>Pub Date</th>
-            <th>Pub Info</th>
-            <th>Link</th>
-          </tr>
-          <tr>
-            <td>{{ new_papers.author }}</td>
-            <td>{{ new_papers.title }}</td>
-            <td>{{ new_papers.pub_date }}</td>
-            <td>{{ new_papers.pub_info }}</td>
-            <td>{{ new_papers.links }}</td>
-          </tr>
-        </table>
-        {% endfor %}
+          <zing-grid src="mongodb://localhost:27017/bfo_papers"></zing-grid>
 
       </div>
     </section><!-- End What We Do Section -->
@@ -747,6 +734,11 @@
   <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Table scripts -->
+  <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.js"></script>
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
