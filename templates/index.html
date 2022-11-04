@@ -708,25 +708,37 @@
           <div class = "section-title">
             <table>
               <tr>
+                <th>Author</th>
                 <th>Title</th>
                 <th>Date</th>
                 <th>Publication</th>
                 <th>Link</th>
               </tr>
+              {% for author in bfo_papers.Authors %}
               <tr>
-              {% for title in  bfo_papers.Title %}
-                <td>{{ title }}</td>
-              {% endfor %}
-              {% for date in  bfo_papers.Date %}
-                <td>{{ date }}</td>
-              {% endfor %}
-              {% for pub in  bfo_papers.Publication %}
-                <td>{{ pub }}</td>
-              {% endfor %}
-              {% for link in  bfo_papers.Link %}
-                <td>{{ link }}</td>
-              {% endfor %}
+                <td> {{ author }} </td>
               </tr>
+              {% endfor %}
+              {% for title in bfo_papers.Title %}
+              <tr>
+                <td> {{ title }} </td>
+              </tr>
+              {% endfor %}
+              {% for date in bfo_papers.Date %}
+              <tr>
+                <td> {{ date }} </td>
+              </tr>
+              {% endfor %}
+              {% for pub in bfo_papers.Publication %}
+              <tr>
+                <td> {{ pub }} </td>
+              </tr>
+              {% endfor %}
+              {% for link in bfo_papers.Link %}
+              <tr>
+                <td> {{ link }} </td>
+              </tr>
+              {% endfor %}
             </table>
           </div>
 
