@@ -705,7 +705,30 @@
           <h2>Recent Publications</h2>
           <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape for New Data!</a></p>
         </div>
-          <zing-grid src="mongodb://localhost:27017/bfo_papers"></zing-grid>
+          <div class = "section-title">
+            <table>
+              <tr>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Publication</th>
+                <th>Link</th>
+              </tr>
+              <tr>
+              {% for title in  bfo_papers.Title %}
+                <td>{{ title }}</td>
+              {% endfor %}
+              {% for date in  bfo_papers.Date %}
+                <td>{{ date }}</td>
+              {% endfor %}
+              {% for pub in  bfo_papers.Publication %}
+                <td>{{ pub }}</td>
+              {% endfor %}
+              {% for link in  bfo_papers.Link %}
+                <td>{{ link }}</td>
+              {% endfor %}
+              </tr>
+            </table>
+          </div>
 
       </div>
     </section><!-- End What We Do Section -->

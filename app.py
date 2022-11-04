@@ -11,7 +11,7 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def index():
-    bfo_papers = mongo.db.bfo_papers.find()
+    bfo_papers = mongo.db.bfo_papers.find_one()
     return render_template("index.html", bfo_papers = bfo_papers)
 
 
