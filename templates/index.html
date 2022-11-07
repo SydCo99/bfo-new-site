@@ -45,7 +45,7 @@
           { title: 'Author' },
           { title: 'Title' },
           { title: 'Date' },
-          { title: 'Publication.' },
+          { title: 'Publication' },
           { title: 'Link',
           "render": function(data, type, row, meta){
             if(type === 'display'){
@@ -54,7 +54,9 @@
 
             return data;
          }},
+         
       ],
+      order: [[2, 'desc']]
   });
   });
   </script>
@@ -725,7 +727,11 @@
       <div class="container">
         <div class = "section-title"> 
           <h2>Recent Publications</h2>
-          <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape for New Data!</a></p>
+          <h4>Click the button below to scrape <a href='https://philpapers.org/'>PhilPapers.org</a> and <a href='https://www.scilit.net/'>SciLit.net</a> for the newest publications involving BFO.</h4>
+          <br>
+          <h5>When you click the button, a seperate browser window will open and close automatically - do not be alarmed!</h5>
+          <br>
+          <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Check for New Publications!</a></p>
         </div>
           <div class = "section-title">
             <table id="example" class="display" width="100%"></table>

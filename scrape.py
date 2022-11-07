@@ -138,6 +138,13 @@ def scrape():
         line = line.replace('Published: ', '')
         pub_date.append(line)
         i += 1
+
+    for i in range(len(pub_date)):
+        if pub_date[i] == "unknown date": 
+            i += 1
+        else: 
+            pub_date[i] = pub_date[i][-4:]
+            i += 1 
         
     for i in range(len(titles_full)):
         line = titles_full[i]
@@ -148,8 +155,8 @@ def scrape():
     for i in range(len(author_full)): 
         line = striphtml(author_full[i])
         line = line.replace('\n', '')
-        #line = line.replace(', ', ',')
         line = line.replace(' ]', ']')
+        line = line.replace(',',', ')
 
         authors.append(line)
         i += 1
