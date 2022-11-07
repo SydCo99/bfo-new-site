@@ -1,6 +1,5 @@
 import requests
 import pandas as pd
-from config import api_key, user_id
 from splinter import Browser
 from bs4 import BeautifulSoup
 from webdriver_manager.chrome import ChromeDriverManager
