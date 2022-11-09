@@ -56,7 +56,9 @@
          }},
          
       ],
-      order: [[2, 'desc']]
+      order: [[2, 'desc']],
+      "pageLength": 5,
+      lengthMenu: [5, 10, 25, 50, 100, 200]
   });
   });
   </script>
@@ -75,7 +77,7 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo me-auto">
-        <h1><a href="index.html">Basic Formal Ontology</a></h1>
+        <h1><a href="#hero">Basic Formal Ontology</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -85,10 +87,14 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Tutorials</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Publications</a></li>
-          <li><a class="nav-link scrollto" href="#testimonials">FOL</a></li>
-          <li><a class="nav-link scrollto" href = "#team"><span>Team</span></a></li>
           <li><a class="nav-link scrollto" href = "#whats-new"><span>What's New</span></a></li>
+          <li class="dropdown"><a href="/publications-full"><span>Publications</span> <i class="bi bi-chevron-right"></i></a>
+            <ul>
+              <li><a href="/publications-full#portfolio">General</a></li>
+              <li><a href="/publications-full#testimonials">First Order Logic (FOL)</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href = "#team"><span>Team</span></a></li>
           <li><a class="nav-link scrollto" href="https://mitpress.mit.edu/9780262527811/building-ontologies-with-basic-formal-ontology/">Guidebook</a></li>
           <li><a class="nav-link scrollto" href="https://github.com/bfo-ontology/BFO/wiki">Github</a></li>
         </ul>
@@ -326,402 +332,6 @@
       </div>
     </section><!-- End Services Section -->
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Publications</h2>
-          <p>Click any title of interest to view the publication.</p>
-        </div>
-
-        <h4 class="bg-light p-2 border-top border-bottom">Books</h4>
-        <ul class="list-group list-group-flush mb-4">
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1"><a href="https://mitpress.mit.edu/9780262527811/building-ontologies-with-basic-formal-ontology/">Building Ontologies With Basic Formal Ontology</a>, MIT Press, 2015</h6>
-                <p class="text-muted mb-0">Robert Arp, Barry Smith and Andrew Spear</p>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <h4 class="bg-light p-2 border-top border-bottom">Articles</h4>
-        <ul class="list-group list-group-flush mb-4">
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1">"<a href="http://ontology.buffalo.edu/smith/articles/Functions-in-BFO.pdf">Functions in Basic Formal Ontology</a>", Applied Ontology, 11:2 (2016), 103-128</h6>
-                <p class="text-muted mb-0">Andrew Spear, Werner Ceusters and Barry Smith</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1">"<a href="http://ontology.buffalo.edu/smith/articles/fois2014.pdf">Applying the Realism-Based Ontology-Versioning Method for Tracking Changes in the Basic Formal Ontology</a>", Formal Ontology in Information Systems. Proceedings of the Sixth International Conference (FOIS 2014), IOS Press, 2014, 227-240</h6>
-                <p class="text-muted mb-0">Selja Seppälä, Barry Smith and Werner Ceusters</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1">"<a href="http://ontology.buffalo.edu/smith/articles/Classifying_Processes.pdf">Classifying Processes: An Essay in Applied Ontology</a>", Ratio, 25:4 (2012), 463-488</h6>
-                <p class="text-muted mb-0">Barry Smith</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1">"<a href="https://philpapers.org/archive/SMIOCM.pdf">On Classifying Material Entities in Basic Formal Ontology</a>", Interdisciplinary Ontology. Proceedings of the Third Interdisciplinary Ontology Meeting, Tokyo: Keio University Press, 2012, 1-13</h6>
-                <p class="text-muted mb-0">Barry Smith</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1">"<a href="https://bit.ly/2JAmwfn">A Method for Evaluating Ontologies - Introducing the BFO-Rigidity Decision Tree Wizard</a>", Formal Ontology in Information Systems (FOIS 2012), DOI:10.3233/978-1-61499-084-0-191</h6>
-                <p class="text-muted mb-0">Patrice Seyed and Stuart Shapiro</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1">"<a href="http://ontology.buffalo.edu/ido/Dispositions_and_IDO.pdf">Dispositions and the Infectious Disease Ontology</a>", Ontology in Information Systems. Proceedings of the Sixth International Conference (FOIS 2010), IOS Press, 2010, 400-413</h6>
-                <p class="text-muted mb-0">Albert Goldfain, Barry Smith and Lindsay Cowell</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1">"<a href="https://philpapers.org/rec/TREAAO">An Axiomatisation of Basic Formal Ontology with Projection Functions</a>", Advances in Ontologies, Proceedings of the Sixth Australasian Ontology Workshop (AOW 2010), ACS, 2010, 71-80</h6>
-                <p class="text-muted mb-0">Kerry Trentelman, Barry Smith</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1">"<a href="http://ontology.buffalo.edu/smith/articles/SNAP_SPAN.pdf">SNAP and SPAN: Towards Dynamic Spatial Ontology</a>", Spatial Cognition and Computation, 4: 1 (March 2004), 69-103</h6>
-                <p class="text-muted mb-0">Pierre Grenon and Barry Smith</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1">"<a href="http://ontology.buffalo.edu/medo/biodynamic.pdf">Biodynamic Ontology: Applying BFO in the Biomedical Domain</a>", in D. M. Pisanelli (ed.), Ontologies in Medicine: Proceedings of the Workshop on Medical Ontologies, Rome October 2003 (Studies in Health and Technology Informatics, 102), Amsterdam: IOS Press, 2004, 20-38.</h6>
-                <p class="text-muted mb-0">Pierre Grenon, Barry Smith and Louis Goldberg</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1">"<a href="http://ontology.buffalo.edu/smith/articles/BFO_for_bioinformatics.pdf">Basic Formal Ontology for Bioinformatics</a>", IFOMIS Reports, 2005.</h6>
-                <p class="text-muted mb-0">Barry Smith, Anand Kumar, Thomas Bittner</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1">"<a href="https://www.sciencedirect.com/science/article/pii/S1386505605001309">Formal ontology for natural language processing and the integration of biomedical databases</a>", International Journal of Medical Informatics, Volume 75, Issues 3–4, March–April 2006, Pages 224-231</h6>
-                <p class="text-muted mb-0">Jonathann Simon, Mariana Dos Santos, James Fielding, Barry Smith</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1">"<a href="https://www.thieme-connect.com/products/ejournals/abstract/10.3414/ME9302">Putting Biomedical Ontologies to Work</a>",  Methods of information in medicine, 2010</h6>
-                <p class="text-muted mb-0">Barry Smith, M. Brochhausen</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1">"<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1560467/">A Strategy for Improving and Integrating Biomedical Ontologies</a>", AMIA Annu Symp Proc. 2005; 2005: 639–643</h6>
-                <p class="text-muted mb-0">Cornelius Rosse, Anand Kumar, Jose L.V. Mejino Jr, Daniel L. Cook, et al</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1"> "<a href="https://books.google.com/books?hl=en&lr=&id=Hul-VBfW3LcC&oi=fnd&pg=PA68&dq=%22Basic+Formal+Ontology%22&ots=k4NHpFgLn_&sig=yYrHcHliGtWNRzGsfCD-BJ09WHI">An information artifact ontology perspective on data collections and associated representational artifacts</a>", MIE, 2012</h6>
-                <p class="text-muted mb-0">Werner Ceusters</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1"> "<a href="https://www.researchgate.net/profile/Christopher_Seebregts2/publication/30511023_Integration_of_SNOMED_CT_into_the_OpenMRS_electronic_medical_record_system_framework/links/02bfe50de830584300000000.pdf#page=118">Aligning the top-level of SNOMED-CT with Basic Formal Ontology</a>", KR-MED, 2008</h6>
-                <p class="text-muted mb-0">William R. Hogan</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1"> "<a href="https://www.sciencedirect.com/science/article/pii/S1386505607000408">Negative findings in electronic health records and biomedical ontologies: A realist approach</a>", International journal of medical informatics, 2007</h6>
-                <p class="text-muted mb-0">Werner Ceusters, Peter Elkin, Barry Smith</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1"> "<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/pmc3104298/">A unified framework for biomedical terminologies and ontologies</a>", Studies in Health Technology and Informatics, 2010</h6>
-                <p class="text-muted mb-0">Werner Ceusters, Barry Smth</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1"> "<a href="https://www.researchgate.net/profile/Barry_Smith4/publication/6688492_Referent_Tracking_The_Problem_of_Negative_Findings/links/0deec53b8895b1c55a000000/Referent-Tracking-The-Problem-of-Negative-Findings.pdf">Referent tracking: The problem of negative findings</a>", Studies in Health Technology and Informatics, 2010</h6>
-                <p class="text-muted mb-0">Werner Ceusters, Peter Elkin, Barry Smith</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1"> "<a href="https://www.researchgate.net/profile/Selja_Seppaelae/publication/288184632_Mapping_WordNet_to_Basic_Formal_Ontology_using_the_KYOTO_ontology/links/567f3c2908ae1e63f1e7f876/Mapping-WordNet-to-Basic-Formal-Ontology-using-the-KYOTO-ontology.pdf">Mapping WordNet to the Basic Formal Ontology using the KYOTO ontology</a>", ICBO 2015</h6>
-                <p class="text-muted mb-0">Selja Seppälä</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1"> "<a href="https://fada.birzeit.edu/jspui/bitstream/20.500.11889/5227/1/JC17.pdf">Classifying Processes and Basic Formal Ontology</a>"</h6>
-                <p class="text-muted mb-0">Mustafa Jarrar and Werner Ceusters</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1"> "<a href="https://link.springer.com/content/pdf/10.1007/978-3-642-21034-1_22.pdf">The Use of Foundational Ontologies in Ontology Development: An Empirical Assessment</a>"</h6>
-                <p class="text-muted mb-0">C. Maria Keet</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1">  "<a href="http://www.sciencedirect.com.gate.lib.buffalo.edu/science/article/pii/S153204641730120X#gr3">An empirical analysis of ontology reuse in BioPortal</a>"</h6>
-                <p class="text-muted mb-0">Christopher Ochs, Yehoshua Perl, James Geller, Sivaram Arabandi, TaniaTudorache, Mark A.Musen</p>
-              </div>
-            </div>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-              <div class="ms-0">
-                <h6 class="fw-bold mb-1">  “<a href="https://www.ncbi.nlm.nih.gov/pubmed/20841847">Mapping BFO and DOLCE</a>,” Studies in Health Technology and Informatics, vol. 160, pp. 1065–1069, 2010.</h6>
-                <p class="text-muted mb-0">L. Temal, A. Rosier, O. Dameron and A. Burgun</p>
-              </div>
-            </div>
-          </li>
-        </ul>
-
-   
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>First Order Logic (FOL)</h2>
-          <p>One result of the preparation of the new ISO/IEC 21838-2 standard version of BFO is the first-order logic axiomatization of BFO, which is now available in compiled form <a href="https://buffalo.box.com/v/BFO-2020-FOL">here</a>. A version of these axioms in <a href="https://en.wikipedia.org/wiki/Common_Logic">Common Logic</a> syntax, together with consistency proofs and other material, is available on the ISO Standards Maintenance Portal <a href="https://standards.iso.org/iso-iec/21838/-2/ed-1/en">here</a>.</p>
-          <br>
-          <p>All files are available under a Creative Commons “Attribution 4.0 International” license.</p>
-          <br>
-          <p>An earlier FOL axiomatization of BFO, using the Isabelle language, is still available <a href="http://www.acsu.buffalo.edu/~bittner3/Theories/BFO">here</a>.<a href="http://krr.meraka.org.za/~aow2010/Trentelman-etal.pdf"> This paper</a> describes an axiomatization of BFO using projection functions. Other papers relevant to the first-order logic formalization of BFO are listed below.</p>
-        </div>
-
-          <ul class="list-group list-group-flush mb-0">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <div class="d-flex align-items-center">
-                <div class="ms-0">
-                  <h6 class="fw-bold mb-1"><a href="http://web.me.com/tbittner1/BittnerProfessional/Publications_files/Bittner-NA-2006-28.pdf">A Spatio-Temporal Top-Level Ontology for Geographic Information Processing, in Technical report, Department of Philosophy, SUNY Buffalo. 2007.</a></h6>
-                  <p class="text-muted mb-0">Bittner, T., M. Donnelly, and B. Smith</p>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <div class="d-flex align-items-center">
-                <div class="ms-0">
-                  <h6 class="fw-bold mb-1"><a href="http://www.acsu.buffalo.edu/~bittner3/BittnerQR2007.pdf">A formal theory of parthood, connectedness, and qualitative size and distance relations among anatomical entities, In C. Price, editor, Proc. of the 21st Annual Workshop on Qualitative Reasoning (QR07), 2007.</a></h6>
-                  <p class="text-muted mb-0">Bittner, T. and M. Donnelly</p>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <div class="d-flex align-items-center">
-                <div class="ms-0">
-                  <h6 class="fw-bold mb-1"><a href="http://www.acsu.buffalo.edu/~bittner3/BittnerDonnellyFOIS06.pdf">A theory of granular parthood based on qualitative cardinality and size measures. in Proceedings of the fourth International Conference on Formal Ontology in Information Systems, FOIS06. 2006.</a></h6>
-                  <p class="text-muted mb-0">Bittner, T. and M. Donnelly</p>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <div class="d-flex align-items-center">
-                <div class="ms-0">
-                  <h6 class="fw-bold mb-1"><a href="http://www.acsu.buffalo.edu/~bittner3/BittnerDonnellyAAAI2007.pdf">A temporal mereology for distinguishing between integral objects and portions of stuff. In R. Holte and A. Howe (eds.), Proceedings of the Twenty-Second AAAI Conference on Artificial Intelligence (AAAI-07).</a></h6>
-                  <p class="text-muted mb-0">Bittner, T. and M. Donnelly</p>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <div class="d-flex align-items-center">
-                <div class="ms-0">
-                  <h6 class="fw-bold mb-1"><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1560437/?tool=pubmed">Containment relations in anatomical ontologies, in AIMA Annual Symposium Proceedings. 2005. p. 206-210.</a></h6>
-                  <p class="text-muted mb-0">Donnelly, M.</p>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <div class="d-flex align-items-center">
-                <div class="ms-0">
-                  <h6 class="fw-bold mb-1"><a href="http://www.mendeley.com/research/spatial-relations-between-classes-of-individuals/">Spatial relations between classes of individuals. in Spatial Information Theory. Cognitive and Computational Foundations of Geographic Information Science. International Conference (COSIT 2005). 2005: Springer Verlag.</a></h6>
-                  <p class="text-muted mb-0">Donnelly, M. and T. Bittner</p>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <div class="d-flex align-items-center">
-                <div class="ms-0">
-                  <h6 class="fw-bold mb-1"><a href="http://web.me.com/tbittner1/BittnerProfessional/Publications_files/Endurants%20and%20perdurants%20in%20directly%20depicting%20ontologies.pdf">Endurants and Perdurants in Directly Depicting Ontologies. AI Communications, 2004. 14(4): p. 247-258.</a></h6>
-                  <p class="text-muted mb-0">Bittner, T., M. Donnelly, and B. Smith</p>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <div class="d-flex align-items-center">
-                <div class="ms-0">
-                  <h6 class="fw-bold mb-1"><a href="http://basic-formal-ontology.org/documents/IR-0303_Donnelly.pdf">On Parts and Holes: The Spatial Structure of the Human Body. in Proceedings of the 11th World Congress on Medical Informatics (MedInfo-04). 2004.</a></h6>
-                  <p class="text-muted mb-0">Donnelly, M.</p>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <div class="d-flex align-items-center">
-                <div class="ms-0">
-                  <h6 class="fw-bold mb-1"><a href="http://genomebiology.com/2005/6/5/R46">Relations in Biomedical Ontologies. Genome Biology, 2005. 6(5): p. r46.</a></h6>
-                  <p class="text-muted mb-0">Smith, B., et al.</p>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <div class="d-flex align-items-center">
-                <div class="ms-0">
-                  <h6 class="fw-bold mb-1"><a href="http://ontology.buffalo.edu/medo/biodynamic.pdf">Biodynamic Ontology: Applying <em>BFO</em> in the Biomedical Domain. in Ontologies in Medicine: Proceedings of the Workshop on Medical Ontologies. 2003: IOS Press, Amsterdam.</a></h6>
-                  <p class="text-muted mb-0">Grenon, P., B. Smith, and L. Goldberg</p>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <div class="d-flex align-items-center">
-                <div class="ms-0">
-                  <h6 class="fw-bold mb-1"><a href="http://ontology.buffalo.edu/smith/articles/SNAP_SPAN.pdf">SNAP and SPAN: Towards Dynamic Spatial Ontology. Spatial Cognition and Computation, 2004. 4(1): p. 69--103.</a></h6>
-                  <p class="text-muted mb-0">Grenon, P. and B. Smith</p>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <div class="d-flex align-items-center">
-                <div class="ms-0">
-                  <h6 class="fw-bold mb-1"><a href="http://ontology.buffalo.edu/smith/articles/cornucopia.pdf">The Cornucopia of Formal-Ontological Relations, in Dialectica 58: 3 (2004), 279–296.</a></h6>
-                  <p class="text-muted mb-0">Smith, B. and P. Grenon</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-      </div>
-    </section><!-- End Testimonials Section -->
-
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Team</h2>
-          <p>Sit sint consectetur velit quos quisquam cupiditate nemo qui</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="../assets/img/team/team-1.jpg" alt="">
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
-              <p>
-                Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
-              </p>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="../assets/img/team/team-2.jpg" alt="">
-              <h4>Sarah Jhinson</h4>
-              <span>Product Manager</span>
-              <p>
-                Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
-              </p>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member">
-              <img src="../assets/img/team/team-3.jpg" alt="">
-              <h4>William Anderson</h4>
-              <span>CTO</span>
-              <p>
-                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-              </p>
-              <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Team Section -->
-
     <!-- ======= What We Do Section ======= -->
     <section id="whats-new" class="whats-new">
       <div class="container">
@@ -741,6 +351,75 @@
 
       </div>
     </section><!-- End What We Do Section -->
+
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Team</h2>
+          <p>Learn more about the core BFO team.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-center">
+            <div class="member">
+              <img src="../assets/img/barryheadshot.jpg" alt="">
+              <h4>Barry Smith</h4>
+              <h2></h2>
+              <h6>Director at National Center for Ontological Research (NCOR) and Professor of Philosophy, University at Buffalo</h6>
+              
+              <div class="social">
+                <a href="http://ontology.buffalo.edu/smith/"><i class="bi bi-window"></i></a>
+                <a href="http://scholar.google.com/citations?hl=en&user=icGNWj4AAAAJ&view_op=list_works&pagesize=100"><i class="bi bi-book"></i></a>
+                <a href="https://www.linkedin.com/in/phismith/"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.youtube.com/c/BarrySmithOntology"><i class="bi bi-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-center">
+            <div class="member">
+              <img src="../assets/img/johnheadshot.png" alt="">
+              <h4>John Beverley</h4>
+              <h2></h2>
+              <h2></h2>
+              <h6>Assistant Professor at SUNY Buffalo</h6>
+              <br>
+              <div class="social">
+                <a href="https://github.com/johnbeve"><i class="bi bi-github"></i></a>
+                <a href="https://johnbeverley.com/"><i class="bi bi-window"></i></a>
+                <a href="https://www.researchgate.net/profile/John-Beverley-2"><i class="bi bi-book"></i></a>
+                <a href="https://www.linkedin.com/in/john-beverley-869445a0/"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.youtube.com/channel/UCedggVqqhabNx0thV_K9WBA"><i class="bi bi-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-center">
+            <div class="member">
+              <img src="../assets/img/alanheadshot.jpg" alt="">
+              <br>
+              <br>
+              <h4>Alan Ruttenberg</h4>
+              <h2></h2>
+              <h2></h2>
+              <h6>Senior Research Associate, Department of Philosophy, University at Buffalo</h6>
+              <br>
+              <div class="social">
+                <a href="https://github.com/alanruttenberg"><i class="bi bi-github"></i></a>
+                <a href="https://scholar.google.com/citations?user=tIcr1AkAAAAJ&hl=en"><i class="bi bi-book"></i></a>
+                <a href="https://www.linkedin.com/in/alanruttenberg/"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
 
 
   </main><!-- End #main -->

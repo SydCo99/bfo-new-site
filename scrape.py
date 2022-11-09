@@ -13,7 +13,7 @@ def striphtml(data):
 
 def scrape():
     executable_path = {'executable_path': ChromeDriverManager().install()}
-    browser = Browser('chrome', **executable_path, headless=False)
+    browser = Browser('chrome', **executable_path, headless=True)
     url = "https://philpapers.org/browse/top-level-ontologies?limit=50&newWindow=&publishedOnly=&freeOnly=&catq=barry+smith&hideAbstracts=&langFilter=&filterByAreas=&sqc=&proOnly=on&uncat=&cn=top-level-ontologies&onlineOnly=&cId=492826&categorizerOn=&new=1&start=0&setAside=&sort=pubYear&showCategories=on&format=html&jlist=&ap_c1=&ap_c2="
     browser.visit(url)
     time.sleep(1)
@@ -88,7 +88,7 @@ def scrape():
     
     #start of scilit scraper 
     executable_path = {'executable_path': ChromeDriverManager().install()}
-    browser = Browser('chrome', **executable_path, headless=False)
+    browser = Browser('chrome', **executable_path, headless=True)
     
     url = "https://www.scilit.net/articles/search?facets__language%5B0%5D=English&highlight=1&q=%22basic%20formal%20ontology%22&sort=Newest&nb_articles=500"
     browser.visit(url)
