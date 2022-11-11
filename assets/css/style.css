@@ -354,18 +354,21 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 60vh;
-  background: url("../img/main-background-2.jpg") center center;
-  background-size: cover;
+  height: 69vh;
+  
+  background-color: rgb(229, 229, 229);
   position: relative;
   margin-top: 70px;
-  padding: 0;
+  margin-bottom:20px;
+  padding: 0px;
 }
+
+
 
 #hero:before {
   content: "";
   background: rgba(56, 64, 70, 0.7);
-  position: absolute;
+  position: relative;
   bottom: 0;
   top: 0;
   left: 0;
@@ -382,6 +385,18 @@ h6 {
   font-weight: 700;
   line-height: 56px;
   color: #fff;
+}
+
+#hero img {
+  width: 100%;
+  height: 500px;
+}
+
+
+
+figure figcaption {
+  border: 1px dotted blue;
+  text-align: center;
 }
 
 #hero h1 span {
@@ -412,17 +427,8 @@ h6 {
   background: #4ea5e0;
 }
 
-@media (max-width: 992px) {
-  #hero {
-    height: calc(100vh - 70px);
-  }
-}
 
-@media (max-width: 768px) {
-  #hero h1 {
-    font-size: 30px;
-    line-height: 36px;
-  }
+
 
   #hero h2 {
     font-size: 18px;
@@ -540,7 +546,7 @@ section {
 # About
 --------------------------------------------------------------*/
 .about {
-  padding: 10px 0;
+  padding: 10px;
 }
 
 .about h3 {

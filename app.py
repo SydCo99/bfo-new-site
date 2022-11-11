@@ -53,7 +53,7 @@ def scraper():
 #     # new_papers = jsonify(new_papers)
 #     #return {'data': new_papers}
 #     # return new_papers
-    return redirect("/", code=302)
+    return redirect("../#whats-new", code=302)
 
 @app.route("/publications-full")
 def publications(): 

@@ -141,6 +141,7 @@ def scrape():
 
     for i in range(len(pub_date)):
         if pub_date[i] == "unknown date": 
+            pub_date[i] = "0 - Date Unknown"
             i += 1
         else: 
             pub_date[i] = pub_date[i][-4:]
@@ -192,5 +193,6 @@ def scrape():
     # print(entries)
 
     return articles
+
 
     
