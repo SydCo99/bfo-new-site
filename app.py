@@ -2,6 +2,7 @@ from flask import Flask, render_template, redirect, jsonify
 from flask_pymongo import PyMongo
 import scrape
 from flask_table import Table, Col
+import pandas as pd 
 
 # Declare your table
 class ItemTable(Table):
@@ -59,9 +60,14 @@ def scraper():
 def publications(): 
     return render_template("inner-page.html")
 
-# @app.route("/get-data")
-# def data(): 
-#     return {'data': new_papers}
+@app.route("/users")
+def user(): 
+    df = pd.read_csv("assets/users.csv")
+    names = df["name"]
+    names = names.tolist()
+    links = df["url"]
+    links = links.tolist()
+    return render_template("users.html", names = names, links = links)
 
 if __name__ == "__main__":
     app.run(debug=True)

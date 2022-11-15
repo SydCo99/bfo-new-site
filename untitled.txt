@@ -1,2 +1,0 @@
-whoops! 
-requests.exceptions.ConnectionError: HTTPSConnectionPool(host='chromedriver.storage.googleapis.com', port=443): Max retries exceeded with url: /107.0.5304/chromedriver_win32.zip (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001EE50A5A890>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
