@@ -88,6 +88,7 @@ def scrape():
     
     #start of scilit scraper 
     executable_path = {'executable_path': ChromeDriverManager().install()}
+  
     browser = Browser('chrome', **executable_path, headless=True)
     
     url = "https://www.scilit.net/articles/search?facets__language%5B0%5D=English&highlight=1&q=%22basic%20formal%20ontology%22&sort=Newest&nb_articles=500"
