@@ -16,6 +16,8 @@
 
   <!--BoxIcons-->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
 
 
   <!-- Google Fonts -->
@@ -100,23 +102,15 @@
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Tutorials</a></li>
           <li><a class="nav-link scrollto" href = "#whats-new"><span>What's New</span></a></li>
-          <li class="dropdown"><a href="/publications-full"><span>Publications</span> <i class="bi bi-chevron-right"></i></a>
-            <ul>
-              <li><a href="/publications-full#portfolio">General</a></li>
-              <li><a href="/publications-full#testimonials">First Order Logic (FOL)</a></li>
-            </ul>
-          </li>
+          <li><a href = 'https://github.com/BFO-ontology/BFO-2020'>FOL</a></li>
           <li><a class="nav-link scrollto" href = "#team"><span>Team</span></a></li>
           <li><a class="nav-link scrollto" href = "/users"><span>Users</span></a></li>
-          <li><a class="nav-link scrollto" href="https://mitpress.mit.edu/9780262527811/building-ontologies-with-basic-formal-ontology/">Guidebook</a></li>
-          <li><a class="nav-link scrollto" href="https://github.com/bfo-ontology/BFO/wiki">Github</a></li>
+          <li><a href="https://github.com/bfo-ontology/BFO/wiki">Github</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <div class="header-social-links d-flex align-items-center">
-        <a href="https://github.com/bfo-ontology/BFO/wiki" class="github"><i class="bi bi-github"></i></a>
-      </div>
+
 
     </div>
   </header><!-- End Header -->
@@ -178,29 +172,26 @@
     <br>
       <div class="container">
 
-        <div class="row">
-          <div class="col-lg-6">
+        <div class="row" style = "width:auto;">
             <br>
-            <br>
-            <figure>
-              <img src="../assets/img/bfohierarchy.png" class="img-fluid" alt="bfo hierarchy" style="width:700px;height:300px;">
-              <figcaption indent: 50px>The BFO Hierarchy</figcaption>
+            <figure style = "display: flex;
+            align-items: center;
+            justify-content: center;">
+              <img src="../assets/img/bfohierarchy.png" class="img-fluid" alt="bfo hierarchy" style="width:85%;height:400px;">
             </figure>
-            
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <h3>About Us</h3>
+            <br>
+            <h2>About Us</h2>
             <p>
               The Basic Formal Ontology (BFO) is a small, upper level ontology that is designed for use in supporting information retrieval, analysis and integration in scientific and other domains. BFO is a genuine upper ontology. Thus it does not contain physical, chemical, biological or other terms which would properly fall within the coverage domains of the special sciences. BFO is used by more than 250 ontology-driven endeavors throughout the world.            </p>
-            <ul>
+            <ul style = "list-style: none;">
               <li><i class="bx bx-caret-right"></i>The BFO project was initiated in 2002 under the auspices of the project <em>Forms of Life</em> sponsored by the <a href="https://www.volkswagenstiftung.de/en/funding/key-results-from-the-humanities/forms-of-life.html">Volkswagen Foundation</a>.
                 The theory behind BFO was developed first by <a href="http://ontology.buffalo.edu/smith">Barry Smith</a> and <a href="http://www.uni-saarland.de/~pgrenon">Pierre Grenon</a> and presented in a series of publications listed <a href="publications.html">here</a>.</li>
-              <li><i class="bx bx-caret-right"></i>Since then major contributions to BFO have been made above all by <a href="http://sciencecommons.org/about/whoweare/ruttenberg">Alan Ruttenberg</a>, also by many others, including:
+              <li><i class="bx bx-caret-right" style = "padding-top: 8px"></i>Since then major contributions to BFO have been made above all by <a href="http://sciencecommons.org/about/whoweare/ruttenberg">Alan Ruttenberg</a>, also by many others, including:
                 <br>
                 <br>
                 <table>
                   <td>
-                    <ul>
+                    <ul style = "list-style: none;">
                       <li><i class="bx bx-chevron-right"></i><a href="http://dbmi.uams.edu/faculty/mathias-brochhausen-ph-d">Mathias Brochhausen</a></li>
                       <li><i class="bx bx-chevron-right"></i><a href="http://www.referent-tracking.com/RTU/?page=ceusters_vita">Werner Ceusters</a></li>
                       <li><i class="bx bx-chevron-right"></i><a href="http://ca.linkedin.com/in/mcourtot">Melanie Courtot</a></li>
@@ -208,7 +199,7 @@
                     </ul>
                   </td>
                   <td>
-                    <ul>
+                    <ul style = "list-style: none;">
                       <li><i class="bx bx-chevron-right"></i><a href="http://www.ebi.ac.uk/~hastings">Janna Hastings</a></li>
                       <li><i class="bx bx-chevron-right"></i><a href="http://www.fruitfly.org/~cjm">Chris Mungall</a></li>
                       <li><i class="bx bx-chevron-right"></i><a href="http://www.fabian-neuhaus.de">Fabian Neuhaus</a></li>
@@ -216,7 +207,7 @@
                     </ul>
                   </td>
                   <td>
-                    <ul>
+                    <ul style = "list-style: none;">
                       <li><i class="bx bx-chevron-right"></i><a href="http://www.jneilotte.com">Neil Otte</a>
                       <li><i class="bx bx-chevron-right"></i><a href="http://james.overton.ca">James Overton</a></li>
                       <li><i class="bx bx-chevron-right"></i><a href="http://www.liai.org/pages/faculty-peters">Bjoern Peters</a></li>
@@ -224,7 +215,7 @@
                     </ul>
                   </td>
                   <td>
-                    <ul>
+                    <ul style = "list-style: none; padding-bottom: 10px;">
                       <li><i class="bx bx-chevron-right"></i><a href="http://purl.org/steschu">Stefan Schulz</a></li>
                       <li><i class="bx bx-chevron-right"></i><a href="http://seljaseppala.wordpress.com">Selja Sepp&auml;l&auml;</a></li>
                       <li><i class="bx bx-chevron-right"></i><a href="http://purl.org/holger">Holger Stenzhorn</a></li>
@@ -234,21 +225,12 @@
                 </table>
               </li>
               <li>...and by more than a hundred other members of the <a href="http://groups.google.com/group/bfo-discuss">BFO Discussion Group</a>.</li>
+              <li style ="padding-top: 10px;">To access BFO in Portuguese, click <a href = 'https://mba.eci.ufmg.br/legal/bfo-pt/'>here</a>.</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class = "container">
-        <div class="row align-items-center">
-          <div class = "col">
-          <h4>External Links:</h4>
-          <h5><i class="bx lg bxl-youtube"></i><a href="https://www.youtube.com/channel/UC8rDbmRGP6A2bs6tn0AOErQ"> BFO YouTube Channel</a></h5>
-          <h5><i class="bx lg bx-message-rounded-detail"></i><a href="https://groups.google.com/forum/#!forum/bfo-discuss"> BFO User Forums</a></h5>
-          <h5><i class="bx lg bx-book-bookmark"></i><a href="https://mitpress.mit.edu/9780262527811/building-ontologies-with-basic-formal-ontology/"> BFO Textbook Published by MIT Press</a></h5>
-          <h5><i class="bx lg bx-tag-alt"></i><a href="https://mba.eci.ufmg.br/legal/bfo-pt/"> BFO in Portuguese</a></h5>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -354,7 +336,7 @@
     <!-- ======= What We Do Section ======= -->
     <section id="whats-new" class="whats-new">
       <div class="container">
-        <div class = "section-title"> 
+        <div class = "section-title" style = "margin-top: 15px;"> 
           <h2>Recent Publications</h2>
           <h4>Click the button below to scrape <a href='https://philpapers.org/'>PhilPapers.org</a> and <a href='https://www.scilit.net/'>SciLit.net</a> for the newest publications involving BFO.</h4>
           <br>

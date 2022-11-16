@@ -55,9 +55,7 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <div class="header-social-links d-flex align-items-center">
-        <a href="https://github.com/bfo-ontology/BFO/wiki" class="github"><i class="bi bi-github"></i></a>
-      </div>
+     
 
     </div>
   </header><!-- End Header -->
@@ -79,7 +77,7 @@
         </div>
 
         <h3 id="ontologies">Ontologies</h3>
-        <ol>
+        <ol style = "line-height:50%">
             {% for user in users %}
               {% if user.url %}
               <li><a href='{{ user["url"] }}''><h6>{{ user["name"] }}</h6></a></li>

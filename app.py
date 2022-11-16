@@ -56,9 +56,9 @@ def scraper():
 #     # return new_papers
     return redirect("../#whats-new", code=302)
 
-@app.route("/publications-full")
-def publications(): 
-    return render_template("inner-page.html")
+# @app.route("/publications-full")
+# def publications(): 
+#     return render_template("inner-page.html")
 
 @app.route("/users")
 def user(): 
