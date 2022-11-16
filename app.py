@@ -63,11 +63,14 @@ def publications():
 @app.route("/users")
 def user(): 
     df = pd.read_csv("assets/users.csv")
-    names = df["name"]
-    names = names.tolist()
-    links = df["url"]
-    links = links.tolist()
-    return render_template("users.html", names = names, links = links)
+    df = df.drop(columns = ["description", "underneath"])
+    df = df.sort_values('name', ascending = True)
+    df["url"] = df["url"].fillna("no_link")
+    users = df.to_dict(orient='records')
+    for user in users: 
+        if user["url"] == "no_link": 
+            del user['url']
+    return render_template("users.html", users=users)
 
 if __name__ == "__main__":
     app.run(debug=True)
