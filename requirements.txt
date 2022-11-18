@@ -1,0 +1,10 @@
+requests
+pandas 
+splinter
+bs4 
+webdriver-manger
+time 
+regex
+flask 
+Flask-PyMongo
+Flask-Table
