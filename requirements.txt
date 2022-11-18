@@ -3,7 +3,6 @@ pandas
 splinter
 bs4 
 webdriver-manager
-time 
 regex
 flask 
 Flask-PyMongo
