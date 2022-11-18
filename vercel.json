@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+      {
+          "src": "*.py",
+          "use": "@sydco99/bfo-new-site"
+      }
+  ],
+  "routes": [
+      {
+          "src": "(.*)",
+          "dest": "app.py"
+      }
+  ]
+}
