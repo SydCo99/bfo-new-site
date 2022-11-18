@@ -2,7 +2,7 @@ requests
 pandas 
 splinter
 bs4 
-webdriver-manger
+webdriver-manager
 time 
 regex
 flask 
