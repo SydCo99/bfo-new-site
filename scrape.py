@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 import re
+import csv 
 
 def striphtml(data):
     p = re.compile(r'<.*?>')
@@ -188,12 +189,35 @@ def scrape():
     #     case = {"author": authors[publication], "title": titles[publication], "pub_date": pub_date[publication],
     #             "pub_info": pub_info[publication], "links": links[publication]}
     #     entries.append(case)
-        
+    df = pd.DataFrame(articles)
+    df.to_csv("assets/newpubs.csv")
+
     browser.quit()
     # print(f"length of entries list is: {len(entries)}")
     # print(entries)
 
-    return articles
+    df1 = pd.read_csv("assets/newpubs.csv")
+    authors = df1["Authors"].tolist()
+    titles = df1["Title"].tolist()
+    date = df1["Date"].tolist()
+    pub = df1["Publication"].tolist()
+    link = df1["Link"].tolist()
+    array_data = []
+    for i in range(len(titles)):
+        row = []
+        row.append(authors[i])
+        row.append(titles[i])
+        row.append(date[i])
+        row.append(pub[i])
+        row.append(link[i])
+        array_data.append(row)
+        row = []
+        i += 1 
+    for row in array_data:
+        print(row)
+
+
+
 
 
     
