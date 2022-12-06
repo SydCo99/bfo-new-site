@@ -190,7 +190,7 @@ def scrape():
     #             "pub_info": pub_info[publication], "links": links[publication]}
     #     entries.append(case)
     df = pd.DataFrame(articles)
-    df.to_csv("assets/newpubs.csv")
+    df.to_csv("assets/newpubs.csv", index = False)
 
     browser.quit()
     # print(f"length of entries list is: {len(entries)}")
@@ -213,8 +213,9 @@ def scrape():
         array_data.append(row)
         row = []
         i += 1 
-    for row in array_data:
-        print(row)
+    print(array_data)
+
+scrape()
 
 
 
