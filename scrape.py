@@ -190,13 +190,13 @@ def scrape():
     #             "pub_info": pub_info[publication], "links": links[publication]}
     #     entries.append(case)
     df = pd.DataFrame(articles)
-    df.to_csv("assets/newpubs.csv", index = False)
+    df.to_csv("assets/newpubs.csv", index = False, quoting = csv.QUOTE_NONE, escapechar = ' ')
 
     browser.quit()
     # print(f"length of entries list is: {len(entries)}")
     # print(entries)
 
-    df1 = pd.read_csv("assets/newpubs.csv")
+    df1 = pd.read_csv("assets/newpubs.csv", escapechar = ' ')
     authors = df1["Authors"].tolist()
     titles = df1["Title"].tolist()
     date = df1["Date"].tolist()
