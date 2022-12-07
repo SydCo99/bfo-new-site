@@ -359,7 +359,7 @@ h6 {
   background-color: rgb(229, 229, 229);
   position: relative;
   margin-top: 70px;
-  margin-bottom:20px;
+  margin-bottom:0px;
   padding: 0px;
 }
 
@@ -435,7 +435,6 @@ figure figcaption {
     line-height: 24px;
     margin-bottom: 30px;
   }
-}
 
 /*--------------------------------------------------------------
 # Sections General
@@ -731,6 +730,11 @@ section {
 .services .icon-box:hover h4 a {
   color: #3498db;
 }
+
+/*--------------------------------------------------------------
+# Carousel
+--------------------------------------------------------------*/
+
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -1045,12 +1049,25 @@ table.dataTable tr.dtrg-level-0 td {
   
 }
 
-.table-striped>tbody>tr:nth-child(odd)>td, 
-.table-striped>tbody>tr:nth-child(odd)>th {
-   background-color: ;
- }
 
+.carousel-caption h5{
+  font-size: 2.1em;
+  font-weight:bold;
+  font-family: "Open Sans", sans-serif;
+  color: white
+}
 
+.carousel-caption a{
+  color: white;
+}
+
+.carousel-caption a:hover{
+  color: rgb(152, 221, 245);
+}
+
+.carousel-item img{
+  opacity: 90%
+}
 
 
 /*--------------------------------------------------------------
