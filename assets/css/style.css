@@ -1031,13 +1031,27 @@ section {
   background-color: #3498db;
 }
 
+
 table.dataTable td {
   font-size: 0.9em;
+  padding: 4px 8px 4px 8px;
+  font-family: "Open Sans", sans-serif;
 }
 
 table.dataTable tr.dtrg-level-0 td {
-  font-size: 0.8em;
+  font-size: 0.9em;
+  padding: 4px 8px 4px 8px;
+  font-family: "Open Sans", sans-serif;
+  
 }
+
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: ;
+ }
+
+
+
 
 /*--------------------------------------------------------------
 # Team
