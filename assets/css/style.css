@@ -1069,10 +1069,6 @@ table.dataTable tr.dtrg-level-0 td {
   opacity: 90%
 }
 
-window.DataTables{ 
-  require( 'datatables.net-bs4' );
-}
-
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
