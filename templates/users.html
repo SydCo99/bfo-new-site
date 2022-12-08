@@ -4,24 +4,36 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta http-equiv="x-UA-Compatible" content="IE=edge" />
 
-  <title>Users</title>
+  <title>Basic Formal Ontology</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/icon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="../assets/img/icon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+  <!--BoxIcons-->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!--Carusel imports-->
+  <script type="text/javascript" src="../assets/js/mdb.min.js"></script>
+  
 
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
@@ -41,14 +53,14 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo me-auto">
-        <h1><a href="../#hero">Basic Formal Ontology</a></h1>
+        <h1><a href="index.html">Basic Formal Ontology</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="../#hero">Home</a></li>
+          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="#ontologies">Ontologies</a></li>
           <li><a class="nav-link scrollto" href="#groups">Groups/Institutions/Projects</a></li>
         </ul>
@@ -66,28 +78,1863 @@
 
     <!-- ======= Portfolio Section ======= -->
 
-    <section id="portfolio" class="portfolio">
+    <section id="users" class="users">
       <div class="container">
 
         <div class="section-title">
           <br>
           <br>
           <h2>Users</h2>
-          <p>Below you will find an alphabetical list of ontologies and institutions/groups using BFO.</p>
+          <p>Below you will find an alphabetical chart of ontologies and a list of institutions/groups using BFO.</p>
         </div>
 
-        <h3 id="ontologies">Ontologies</h3>
-        <ol style = "line-height:50%">
-            {% for user in users %}
-              {% if user.url %}
-              <li><a href='{{ user["url"] }}''><h6>{{ user["name"] }}</h6></a></li>
-              {% else %}
-                <li><h6>{{ user["name"] }}</h6></li>
-              {% endif %}
-            {% endfor %}
-        </ol>
+        <div id = "ontologies">
+          <h1>Ontologies</h1>
+        </div>
 
-        <h3 id="groups">Instituions/Groups/Projects</h3>
+        <div class = "user-table" id = "user-table">
+        <br>
+        <table class = "dataframe">
+          <thead>
+            <tr>
+              <th>Ontology</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>(EXperimental ACTions) Biomedical Protocol Ontology (EXACT2)</td>
+              <td><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4255744">http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4255744</a></td>
+            </tr>
+            <tr>
+              <td>(Microbial) Typing Ontology (TypOn)</td>
+              <td><a href="http://www.phyloviz.net/typon">http://www.phyloviz.net/typon</a></td>
+            </tr>
+            <tr>
+              <td>ACGT Master Ontology (ACGT MO)</td>
+              <td><a href="http://bioportal.bioontology.org/ontologies/ACGT-MO">http://bioportal.bioontology.org/ontologies/ACGT-MO</a></td>
+            </tr>
+            <tr>
+              <td>AFO Foundational Ontology</td>
+              <td><a href="http://esw.w3.org/topic/HCLS/AFO_Foundational_Ontology">http://esw.w3.org/topic/HCLS/AFO_Foundational_Ontology</a></td>
+            </tr>
+            <tr>
+              <td>ARIES (Arkansas Imaging Enterprise System) Knowledge Graph</td>
+              <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8866818/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8866818/</a></td>
+            </tr>
+            <tr>
+              <td>Actionable Intelligence Retrieval System (AIRS)</td>
+              <td><a href="http://ncor.buffalo.edu/ontologies/AIRS_Ontologies.pdf">http://ncor.buffalo.edu/ontologies/AIRS_Ontologies.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Addiction Ontology (AO)</td>
+              <td><a href="https://www.taylorfrancis.com/chapters/edit/10.4324/9781003032762-46/addiction-ontology-unify-competing-conceptualizations-addiction-robert-kelly-janna-hastings-robert-west">https://www.taylorfrancis.com/chapters/edit/10.4324/9781003032762-46/addiction-ontology-unify-competing-conceptualizations-addiction-robert-kelly-janna-hastings-robert-west</a></td>
+            </tr>
+            <tr>
+              <td>Additive Manufacturing Ontology (AMO)</td>
+              <td><a href="https://www.sciencedirect.com/science/article/pii/S0166361518301647">https://www.sciencedirect.com/science/article/pii/S0166361518301647</a></td>
+            </tr>
+            <tr>
+              <td>Adolescent Depression Ontology (ADO)</td>
+              <td><a href="https://www.jmir.org/article/viewFile/jmir_v19i7e259/2">https://www.jmir.org/article/viewFile/jmir_v19i7e259/2</a></td>
+            </tr>
+            <tr>
+              <td>Adverse Event Reporting Ontology (AERO)</td>
+              <td><a href="http://purl.obolibrary.org/obo/aero">http://purl.obolibrary.org/obo/aero</a></td>
+            </tr>
+            <tr>
+              <td>African Wildlife Ontology (AWO)</td>
+              <td><a href="https://arxiv.org/pdf/1905.09519.pdf">https://arxiv.org/pdf/1905.09519.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Agronomic Linked Data (AgroLD)</td>
+              <td><a href="https://www.biorxiv.org/content/10.1101/325423v3.full.pdf">https://www.biorxiv.org/content/10.1101/325423v3.full.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Agronomy Ontology (AGRO)</td>
+              <td><a href="https://bigdata.cgiar.org/resources/agronomy-ontology/">https://bigdata.cgiar.org/resources/agronomy-ontology/</a></td>
+            </tr>
+            <tr>
+              <td>Air Force Research Laboratory, Rome, New York</td>
+              <td><a href="http://www.wpafb.af.mil/afrl">http://www.wpafb.af.mil/afrl</a></td>
+            </tr>
+            <tr>
+              <td>Algorithm-Implementation-Execution Ontology Design Pattern</td>
+              <td><a href="http://ontologydesignpatterns.org/wiki/images/4/41/WOP2016_paper_07.pdf">http://ontologydesignpatterns.org/wiki/images/4/41/WOP2016_paper_07.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Allotrope Foundation: Rethinking Scientific Data</td>
+              <td><a href="https://www.allotrope.org/">https://www.allotrope.org/</a></td>
+            </tr>
+            <tr>
+              <td>Alzheimer Disease Ontology (ADO)</td>
+              <td><a href="http://www.sciencedirect.com/science/article/pii/S155252601300085X">http://www.sciencedirect.com/science/article/pii/S155252601300085X</a></td>
+            </tr>
+            <tr>
+              <td>Alzheimer's Disease Diagnosis Ontology (ADDO)</td>
+              <td><a href="https://ma.x-mol.com/paper/1366901247607140352">https://ma.x-mol.com/paper/1366901247607140352</a></td>
+            </tr>
+            <tr>
+              <td>Anatomy of the Insect Skeleto-Muscular system ontology (AISM)</td>
+              <td><a href="https://www.preprints.org/manuscript/202201.0254/v1">https://www.preprints.org/manuscript/202201.0254/v1</a></td>
+            </tr>
+            <tr>
+              <td>Animals in Context Ontology (ACO)</td>
+              <td><a href="http://ceur-ws.org/Vol-897/session1-paper04.pdf">http://ceur-ws.org/Vol-897/session1-paper04.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Antimicrobial-Microorganism Ontology</td>
+              <td><a href="https://www.sciencedirect.com/science/article/pii/S1532046411001675">https://www.sciencedirect.com/science/article/pii/S1532046411001675</a></td>
+            </tr>
+            <tr>
+              <td>Apollo Structured Vocabulary (Apollo-SV)</td>
+              <td><a href="http://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-016-0092-y">http://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-016-0092-y</a></td>
+            </tr>
+            <tr>
+              <td>Asset Management Ontology (AMODO)</td>
+              <td><a href="https://www.sciencedirect.com/science/article/abs/pii/S2452414X21000947">https://www.sciencedirect.com/science/article/abs/pii/S2452414X21000947</a></td>
+            </tr>
+            <tr>
+              <td>AstraZeneca</td>
+              <td><a href="http://www.astrazeneca.com/">http://www.astrazeneca.com/</a></td>
+            </tr>
+            <tr>
+              <td>Autism-DSM-ADI-R Ontology (ADAR)</td>
+              <td><a href="http://www.ncbi.nlm.nih.gov/pubmed/26151311">http://www.ncbi.nlm.nih.gov/pubmed/26151311</a></td>
+            </tr>
+            <tr>
+              <td>Autodesk</td>
+              <td><a href="https://www.autodesk.com/">https://www.autodesk.com/</a></td>
+            </tr>
+            <tr>
+              <td>BIRNLex</td>
+              <td><a href="https://bioportal.bioontology.org/ontologies/BIRNLEX">https://bioportal.bioontology.org/ontologies/BIRNLEX</a></td>
+            </tr>
+            <tr>
+              <td>Bacterial Clinical Infectious Diseases Ontology (BCIDO)</td>
+              <td><a href="http://www.sciencedirect.com/science/article/pii/S1532046415001549">http://www.sciencedirect.com/science/article/pii/S1532046415001549</a></td>
+            </tr>
+            <tr>
+              <td>Bank Ontology</td>
+              <td><a href="http://world-comp.org/p2011/IKE5165.pdf">http://world-comp.org/p2011/IKE5165.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Battle Management Ontology (BMO)</td>
+              <td><a href="http://link.springer.com/article/10.1007/s10489-016-0834-7">http://link.springer.com/article/10.1007/s10489-016-0834-7</a></td>
+            </tr>
+            <tr>
+              <td>Behavior Change Intervention Ontology (BCIO)</td>
+              <td><a href="https://wellcomeopenresearch.org/articles/5-123">https://wellcomeopenresearch.org/articles/5-123</a></td>
+            </tr>
+            <tr>
+              <td>Behavior Perspective Model (BPM)</td>
+              <td><a href="https://books.google.com/books?hl=en&amp;lr=lang_en&amp;id=u8xmCgAAQBAJ&amp;oi=fnd&amp;pg=PA366&amp;ots=p35Xg1rqn0&amp;sig=6VibTWt8Y6mpTSyPFFc68xHePDw#v=onepage&amp;q&amp;f=false">https://books.google.com/books?hl=en&amp;lr=lang_en&amp;id=u8xmCgAAQBAJ&amp;oi=fnd&amp;pg=PA366&amp;ots=p35Xg1rqn0&amp;sig=6VibTWt8Y6mpTSyPFFc68xHePDw#v=onepage&amp;q&amp;f=false</a></td>
+            </tr>
+            <tr>
+              <td>Bentley Software, Inc.</td>
+              <td>No Link Available</td>
+            </tr>
+            <tr>
+              <td>Berkeley Bioinformatics Open-Source Projects (BBOP)</td>
+              <td><a href="http://berkeleybop.org/">http://berkeleybop.org/</a></td>
+            </tr>
+            <tr>
+              <td>Beta Cell Genomics Application Ontology (BCGO)</td>
+              <td><a href="http://obofoundry.org/ontology/bcgo.html">http://obofoundry.org/ontology/bcgo.html</a></td>
+            </tr>
+            <tr>
+              <td>Bio-Knowledge Network Ontology (BioKNO)</td>
+              <td><a href="https://www.degruyter.com/view/journals/jib/15/3/article-20180023.xml">https://www.degruyter.com/view/journals/jib/15/3/article-20180023.xml</a></td>
+            </tr>
+            <tr>
+              <td>BioAssay Ontology</td>
+              <td><a href="http://www.bioassayontology.org/">http://www.bioassayontology.org/</a></td>
+            </tr>
+            <tr>
+              <td>BioTop</td>
+              <td><a href="http://ebooks.iospress.nl/publication/46379">http://ebooks.iospress.nl/publication/46379</a></td>
+            </tr>
+            <tr>
+              <td>BioTopLite2</td>
+              <td><a href="http://purl.org/biotop/btl2.owl">http://purl.org/biotop/btl2.owl</a></td>
+            </tr>
+            <tr>
+              <td>Bioinformatics Web Service Ontology (OBIWS)</td>
+              <td><a href="http://code.google.com/p/obi-webservice">http://code.google.com/p/obi-webservice</a></td>
+            </tr>
+            <tr>
+              <td>Biological Collections Ontology (BCO)</td>
+              <td><a href="http://obofoundry.org/ontology/bco.html">http://obofoundry.org/ontology/bco.html</a></td>
+            </tr>
+            <tr>
+              <td>Biomedical Ethics Ontology</td>
+              <td><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2725426/">http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2725426/</a></td>
+            </tr>
+            <tr>
+              <td>Biomedical Grid Terminology (BiomedGT, retired)</td>
+              <td><a href="https://wiki.nci.nih.gov/pages/viewpage.action?pageId=63996208">https://wiki.nci.nih.gov/pages/viewpage.action?pageId=63996208</a></td>
+            </tr>
+            <tr>
+              <td>Biomedical Knowledge Engineering Lab at Seoul National University (SNU BiKE)</td>
+              <td><a href="http://bike.snu.ac.kr/">http://bike.snu.ac.kr/</a></td>
+            </tr>
+            <tr>
+              <td>Biomedical Study - Lifecycle Management (BMS-LM) core ontology</td>
+              <td><a href="https://doi.org/10.1016/j.jbi.2022.104007">https://doi.org/10.1016/j.jbi.2022.104007</a></td>
+            </tr>
+            <tr>
+              <td>Biomimetic Ontology</td>
+              <td><a href="http://link.springer.com/chapter/10.1007/978-3-319-31782-3_13">http://link.springer.com/chapter/10.1007/978-3-319-31782-3_13</a></td>
+            </tr>
+            <tr>
+              <td>Blood Ontology (BLO)</td>
+              <td><a href="http://mba.eci.ufmg.br/BLO">http://mba.eci.ufmg.br/BLO</a></td>
+            </tr>
+            <tr>
+              <td>Body Fluids Ontology (BFLO)</td>
+              <td><a href="http://ontology.buffalo.edu/smith/articles/BFLO_ICBO_2011.pdf">http://ontology.buffalo.edu/smith/articles/BFLO_ICBO_2011.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Bone Dysplasia Ontology (BDO)</td>
+              <td><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3338382/">http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3338382/</a></td>
+            </tr>
+            <tr>
+              <td>Brain Operation Database (BODB)</td>
+              <td><a href="http://neuroinformatics.usc.edu/resources/brain-operation-database-bodb">http://neuroinformatics.usc.edu/resources/brain-operation-database-bodb</a></td>
+            </tr>
+            <tr>
+              <td>CHRONIOUS Ontology Suite</td>
+              <td><a href="http://ceur-ws.org/Vol-833/paper22.pdf">http://ceur-ws.org/Vol-833/paper22.pdf</a></td>
+            </tr>
+            <tr>
+              <td>CICCONETO et al., 2020; CICCONETO, 2021) spatial relations ontology</td>
+              <td>No Link Available</td>
+            </tr>
+            <tr>
+              <td>CIDO-COVID-19</td>
+              <td><a href="https://ieeexplore.ieee.org/abstract/document/9629555">https://ieeexplore.ieee.org/abstract/document/9629555</a></td>
+            </tr>
+            <tr>
+              <td>CPR Ontology for the Institute of Medicine's (IOM) Computer-Based Patient Record Ontology</td>
+              <td><a href="http://code.google.com/p/cpr-ontology">http://code.google.com/p/cpr-ontology</a></td>
+            </tr>
+            <tr>
+              <td>CTSAconnect</td>
+              <td><a href="http://www.ctsaconnect.org/">http://www.ctsaconnect.org/</a></td>
+            </tr>
+            <tr>
+              <td>CUBRC</td>
+              <td><a href="http://www.cubrc.org/index.php/data-science-and-information-fusion/ontology/'94">http://www.cubrc.org/index.php/data-science-and-information-fusion/ontology/'94</a></td>
+            </tr>
+            <tr>
+              <td>Cancer Cell Ontology (OncoCL)</td>
+              <td><a href="http://ceur-ws.org/Vol-1060/icbo2013_submission_75.pdf">http://ceur-ws.org/Vol-1060/icbo2013_submission_75.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Cancer Chemoprevention Ontology (CanCo)</td>
+              <td><a href="http://bioportal.bioontology.org/ontologies/CANCO">http://bioportal.bioontology.org/ontologies/CANCO</a></td>
+            </tr>
+            <tr>
+              <td>Cardiovascular Disease Ontology (CVDO)</td>
+              <td><a href="https://www.ebi.ac.uk/ols/ontologies/cvdo">https://www.ebi.ac.uk/ols/ontologies/cvdo</a></td>
+            </tr>
+            <tr>
+              <td>Case Based Reasoning (CBR) Ontology</td>
+              <td><a href="https://doi.org/10.1109/ISSE51541.2021.9582535">https://doi.org/10.1109/ISSE51541.2021.9582535</a></td>
+            </tr>
+            <tr>
+              <td>Categorical Temporal Phenomenology</td>
+              <td><a href="http://www.roentgensemiotics.net/phenomenology.htm">http://www.roentgensemiotics.net/phenomenology.htm</a></td>
+            </tr>
+            <tr>
+              <td>Cell Behavior Ontology (CBO)</td>
+              <td><a href="http://cbo.biocomplexity.indiana.edu/">http://cbo.biocomplexity.indiana.edu/</a></td>
+            </tr>
+            <tr>
+              <td>Cell Culture Ontology (CCONT)</td>
+              <td><a href="https://bioportal.bioontology.org/ontologies/CCONT">https://bioportal.bioontology.org/ontologies/CCONT</a></td>
+            </tr>
+            <tr>
+              <td>Cell Cycle Ontology</td>
+              <td><a href="http://genomebiology.com/2009/10/5/R58">http://genomebiology.com/2009/10/5/R58</a></td>
+            </tr>
+            <tr>
+              <td>Cell Expression, Localization, Development and Anatomy Ontology (CELDA)</td>
+              <td><a href="http://nar.oxfordjournals.org.gate.lib.buffalo.edu/content/early/2013/12/03/nar.gkt1264.full.pdf">http://nar.oxfordjournals.org.gate.lib.buffalo.edu/content/early/2013/12/03/nar.gkt1264.full.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Cell Line Ontology (CLO)</td>
+              <td><a href="http://obofoundry.org/ontology/clo.html">http://obofoundry.org/ontology/clo.html</a></td>
+            </tr>
+            <tr>
+              <td>Cell Ontology</td>
+              <td><a href="http://obofoundry.org/ontology/cl.html">http://obofoundry.org/ontology/cl.html</a></td>
+            </tr>
+            <tr>
+              <td>Cellular Microscopy Phenotype Ontology (CMPO)</td>
+              <td><a href="http://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-016-0074-0">http://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-016-0074-0</a></td>
+            </tr>
+            <tr>
+              <td>Center for e-Design</td>
+              <td><a href="http://www.edesign.ecs.umass.edu/">http://www.edesign.ecs.umass.edu/</a></td>
+            </tr>
+            <tr>
+              <td>Chemical Analysis Ontology (CAO)</td>
+              <td><a href="http://champ-project.org/">http://champ-project.org/</a></td>
+            </tr>
+            <tr>
+              <td>Chemical Entities of Biological Interest (ChEBI)</td>
+              <td><a href="http://www.ebi.ac.uk/chebi">http://www.ebi.ac.uk/chebi</a></td>
+            </tr>
+            <tr>
+              <td>Chemical Information Ontology (CHEMINF)</td>
+              <td><a href="http://obofoundry.org/ontology/cheminf.html">http://obofoundry.org/ontology/cheminf.html</a></td>
+            </tr>
+            <tr>
+              <td>Chemical Methods Ontology (CHMO)</td>
+              <td><a href="http://obofoundry.org/ontology/chmo.html">http://obofoundry.org/ontology/chmo.html</a></td>
+            </tr>
+            <tr>
+              <td>Cigarette Smoke Exposure Ontology (CSEO)</td>
+              <td><a href="http://www.jbiomedsem.com/content/pdf/2041-1480-5-31.pdf">http://www.jbiomedsem.com/content/pdf/2041-1480-5-31.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Clinical Data Integration Model (CDMO)</td>
+              <td><a href="https://www.ncbi.nlm.nih.gov/pubmed/24954896">https://www.ncbi.nlm.nih.gov/pubmed/24954896</a></td>
+            </tr>
+            <tr>
+              <td>Clinical Narrative Temporal Relation Ontology (CNTRO)</td>
+              <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3248753/?">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3248753/?</a></td>
+            </tr>
+            <tr>
+              <td>Clinical Trial Protocol Ontology (CTP-O)</td>
+              <td><a href="https://www.sciencedirect.com/science/article/pii/S1569190X18301114">https://www.sciencedirect.com/science/article/pii/S1569190X18301114</a></td>
+            </tr>
+            <tr>
+              <td>Clusters of Orthologous Groups (COG) Analysis Ontology (CAO)</td>
+              <td><a href="https://bioportal.bioontology.org/ontologies/CAO">https://bioportal.bioontology.org/ontologies/CAO</a></td>
+            </tr>
+            <tr>
+              <td>Cognition-Guided Surgery (CGS) Ontology</td>
+              <td><a href="http://archiv.ub.uni-heidelberg.de/volltextserver/22579">http://archiv.ub.uni-heidelberg.de/volltextserver/22579</a></td>
+            </tr>
+            <tr>
+              <td>Cognitive Paradigm Ontology (COGPO)</td>
+              <td><a href="http://cogpo.org/">http://cogpo.org/</a></td>
+            </tr>
+            <tr>
+              <td>Cognitive Process Ontology (CPO)</td>
+              <td>No Link Available</td>
+            </tr>
+            <tr>
+              <td>Collaborative Learning Healthcare Systems (CLHS) ontology</td>
+              <td><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/lrh2.10306">https://onlinelibrary.wiley.com/doi/full/10.1002/lrh2.10306</a></td>
+            </tr>
+            <tr>
+              <td>Common Anatomy Reference Ontology (CARO)</td>
+              <td><a href="http://obofoundry.org/ontology/caro.html">http://obofoundry.org/ontology/caro.html</a></td>
+            </tr>
+            <tr>
+              <td>Common Core Cyber Ontology (C3O)</td>
+              <td><a href="https://www-spiedigitallibrary-org.gate.lib.buffalo.edu/conference-proceedings-of-spie/10635/106350F/A-common-core-based-cyber-ontology-in-support-of-cross/10.1117/12.2307719.full?SSO=1">https://www-spiedigitallibrary-org.gate.lib.buffalo.edu/conference-proceedings-of-spie/10635/106350F/A-common-core-based-cyber-ontology-in-support-of-cross/10.1117/12.2307719.full?SSO=1</a></td>
+            </tr>
+            <tr>
+              <td>Common Core Ontologies (CCO)</td>
+              <td><a href="http://www.cubrc.org/index.php/data-science-and-information-fusion/ontology">http://www.cubrc.org/index.php/data-science-and-information-fusion/ontology</a></td>
+            </tr>
+            <tr>
+              <td>Communication Standards Ontology (CSO)</td>
+              <td><a href="http://www.ncbi.nlm.nih.gov/pubmed/20543345">http://www.ncbi.nlm.nih.gov/pubmed/20543345</a></td>
+            </tr>
+            <tr>
+              <td>Comparative Data Analysis Ontology (CDAO)</td>
+              <td><a href="https://bioportal.bioontology.org/ontologies/CDAO">https://bioportal.bioontology.org/ontologies/CDAO</a></td>
+            </tr>
+            <tr>
+              <td>Computational Neuroscience Ontology (CNO)</td>
+              <td><a href="https://bioportal.bioontology.org/ontologies/CNO">https://bioportal.bioontology.org/ontologies/CNO</a></td>
+            </tr>
+            <tr>
+              <td>Computer Aided Engineering Modeling Language (CAEML) Ontology</td>
+              <td><a href="https://www.clics-network.org/downloads/NAFEMS_2016_Towards%20Cognitive%20Computer%20Aided%20Engineering.pdf">https://www.clics-network.org/downloads/NAFEMS_2016_Towards%20Cognitive%20Computer%20Aided%20Engineering.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Computer-Based Patient Record Ontology (CPRO)</td>
+              <td><a href="https://code.google.com/archive/p/cpr-ontology/">https://code.google.com/archive/p/cpr-ontology/</a></td>
+            </tr>
+            <tr>
+              <td>Conceptual Model Ontology (CMO)</td>
+              <td><a href="http://ceur-ws.org/Vol-833/paper25.pdf">http://ceur-ws.org/Vol-833/paper25.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Core Data Integration Model (CDIM)</td>
+              <td><a href="https://www.researchgate.net/publication/263323866_Clinical_Data_Integration_Model_Core_Interoperability_Ontology_for_Research_Using_Primary_Care_Data">https://www.researchgate.net/publication/263323866_Clinical_Data_Integration_Model_Core_Interoperability_Ontology_for_Research_Using_Primary_Care_Data</a></td>
+            </tr>
+            <tr>
+              <td>Coriell Cell Line Ontology</td>
+              <td><a href="http://efo.sourceforge.net/coriell.htm">http://efo.sourceforge.net/coriell.htm</a></td>
+            </tr>
+            <tr>
+              <td>Coronavirus Infectious Disease Ontology (CIDO)</td>
+              <td><a href="http://www.ontobee.org/ontology/cido">http://www.ontobee.org/ontology/cido </a></td>
+            </tr>
+            <tr>
+              <td>Crop Planning and Production Process Ontology (C3PO)</td>
+              <td><a href="http://ceur-ws.org/Vol-2969/paper12-IFOW.pdf">http://ceur-ws.org/Vol-2969/paper12-IFOW.pdf</a></td>
+            </tr>
+            <tr>
+              <td>CybOnto (Cognitive Digital Twin Ontology for CyberSecurity)</td>
+              <td><a href="https://arxiv.org/pdf/2108.00551.pdf">https://arxiv.org/pdf/2108.00551.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Cybonto Cyber Security Ontology</td>
+              <td><a href="https://arxiv.org/abs/2108.00551">https://arxiv.org/abs/2108.00551</a></td>
+            </tr>
+            <tr>
+              <td>DOQS</td>
+              <td><a href="http://www.doqs.com/">http://www.doqs.com/</a></td>
+            </tr>
+            <tr>
+              <td>DSpace at NTNUA</td>
+              <td><a href="http://dspace.lib.ntua.gr/handle/123456789/3046">http://dspace.lib.ntua.gr/handle/123456789/3046</a></td>
+            </tr>
+            <tr>
+              <td>Dairy Cattle Performance Ontology (DCPO)</td>
+              <td><a href="http://ceur-ws.org/Vol-3073/paper3.pdf">http://ceur-ws.org/Vol-3073/paper3.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Darwin Core (DwC)</td>
+              <td><a href="http://rs.tdwg.org/dwc">http://rs.tdwg.org/dwc</a></td>
+            </tr>
+            <tr>
+              <td>Data Integration Aggregated Model for Nuclear Deployment (DIAMOND)</td>
+              <td><a href="https://link.springer.com/chapter/10.1007/978-3-030-82083-1_2">https://link.springer.com/chapter/10.1007/978-3-030-82083-1_2</a></td>
+            </tr>
+            <tr>
+              <td>Data Model for Representing Biographical Information for Prosopography (Bio-CRM)</td>
+              <td><a href="https://seco.cs.aalto.fi/publications/2018/tuominen-et-al-rrl-2018.pdf">https://seco.cs.aalto.fi/publications/2018/tuominen-et-al-rrl-2018.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Data Use Ontology (DUO)</td>
+              <td><a href="http://www.obofoundry.org/ontology/duo.html">http://www.obofoundry.org/ontology/duo.html</a></td>
+            </tr>
+            <tr>
+              <td>Decision Ontology</td>
+              <td><a href="https://doi.org/10.3390/systems6040046">https://doi.org/10.3390/systems6040046</a></td>
+            </tr>
+            <tr>
+              <td>Diabetes Mellitus Treatment Ontology (DMTO)</td>
+              <td><a href="https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-018-0176-y">https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-018-0176-y</a></td>
+            </tr>
+            <tr>
+              <td>Diabetes mellitus Diagnosis Ontology (DDO)</td>
+              <td><a href="http://link.springer.com/article/10.1186/s40535-016-0021-2">http://link.springer.com/article/10.1186/s40535-016-0021-2</a></td>
+            </tr>
+            <tr>
+              <td>Digital Objects in Philosophy Ontology (DOPHO)</td>
+              <td><a href="https://publiscologne.th-koeln.de/frontdoor/deliver/index/docId/1363/file/MAT_Seidlmayer.pdf">https://publiscologne.th-koeln.de/frontdoor/deliver/index/docId/1363/file/MAT_Seidlmayer.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Document Act Ontology (D-Acts)</td>
+              <td><a href="https://code.google.com/p/d-acts">https://code.google.com/p/d-acts</a></td>
+            </tr>
+            <tr>
+              <td>Drug Interaction Ontology (DIO)</td>
+              <td><a href="http://www.ncbi.nlm.nih.gov/pubmed/15360854">http://www.ncbi.nlm.nih.gov/pubmed/15360854</a></td>
+            </tr>
+            <tr>
+              <td>Drug Ontology (DrOn)</td>
+              <td><a href="http://obofoundry.org/ontology/dron.html">http://obofoundry.org/ontology/dron.html</a></td>
+            </tr>
+            <tr>
+              <td>Drug Repurposing Ontology (DRO)</td>
+              <td><a href="https://www.researchgate.net/profile/Werner_Ceusters/publication/335079148_Foundations_for_a_Realism-based_Drug_Repurposing_Ontology/links/5d4d7ce44585153e5948eb68/Foundations-for-a-Realism-based-Drug-Repurposing-Ontology.pdf">https://www.researchgate.net/profile/Werner_Ceusters/publication/335079148_Foundations_for_a_Realism-based_Drug_Repurposing_Ontology/links/5d4d7ce44585153e5948eb68/Foundations-for-a-Realism-based-Drug-Repurposing-Ontology.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Drug-drug Interaction Evidence Ontology (DIDEO)</td>
+              <td><a href="http://obofoundry.org/ontology/dideo.html">http://obofoundry.org/ontology/dideo.html</a></td>
+            </tr>
+            <tr>
+              <td>Drug-drug Interaction Ontology (DINTO)</td>
+              <td><a href="http://www.obofoundry.org/ontology/dinto.html">http://www.obofoundry.org/ontology/dinto.html</a></td>
+            </tr>
+            <tr>
+              <td>Dumontier Lab</td>
+              <td><a href="http://dumontierlab.com/index.php?page=ontologies">http://dumontierlab.com/index.php?page=ontologies</a></td>
+            </tr>
+            <tr>
+              <td>ENVOn (3D shape ontology)</td>
+              <td><a href="http://www.semantic-web-journal.net/system/files/swj3043.pdf">http://www.semantic-web-journal.net/system/files/swj3043.pdf</a></td>
+            </tr>
+            <tr>
+              <td>ENanoMapper (ENM)</td>
+              <td><a href="https://github.com/enanomapper">https://github.com/enanomapper</a></td>
+            </tr>
+            <tr>
+              <td>Eagle-I Research Resource Ontology (ERO)</td>
+              <td><a href="https://open.med.harvard.edu/wiki/display/eaglei/Ontology">https://open.med.harvard.edu/wiki/display/eaglei/Ontology</a></td>
+            </tr>
+            <tr>
+              <td>Ecole polytechnique federale de Lausanne (EPFL)</td>
+              <td><a href="https://people.epfl.ch/cgi-bin/people?id=105551&amp;lang=en&amp;cvlang=en">https://people.epfl.ch/cgi-bin/people?id=105551&amp;lang=en&amp;cvlang=en</a></td>
+            </tr>
+            <tr>
+              <td>EifcOWL (Enhanced Ontology for the Construction Industry Foundation Classes)</td>
+              <td><a href="https://content.iospress.com/articles/applied-ontology/ao210254">https://content.iospress.com/articles/applied-ontology/ao210254</a></td>
+            </tr>
+            <tr>
+              <td>Electrocardiography Ontology (ECG)</td>
+              <td><a href="http://www.j-biomed-inform.com/article/S1532-0464(10)00118-8/abstract">http://www.j-biomed-inform.com/article/S1532-0464(10)00118-8/abstract</a></td>
+            </tr>
+            <tr>
+              <td>Eligibility Criteria Ontology (EC-O)</td>
+              <td><a href="https://www.sciencedirect.com/science/article/pii/S1569190X18301114">https://www.sciencedirect.com/science/article/pii/S1569190X18301114</a></td>
+            </tr>
+            <tr>
+              <td>Elsevier Smart Content Strategy</td>
+              <td><a href="http://www.elsevier.com/wps/find/authored_newsitem.cws_home/companynews05_01849">http://www.elsevier.com/wps/find/authored_newsitem.cws_home/companynews05_01849</a></td>
+            </tr>
+            <tr>
+              <td>Email Ontology</td>
+              <td><a href="http://ncor.buffalo.edu/2013/STIDS/5-Email.pptx">http://ncor.buffalo.edu/2013/STIDS/5-Email.pptx</a></td>
+            </tr>
+            <tr>
+              <td>Emotion Ontology (EMO)</td>
+              <td><a href="http://www.obofoundry.org/ontology/mfoem.html">http://www.obofoundry.org/ontology/mfoem.html</a></td>
+            </tr>
+            <tr>
+              <td>End of Life (EoL) Domain Ontology</td>
+              <td><a href="https://www.sciencedirect.com/science/article/abs/pii/S0167739X19326640">https://www.sciencedirect.com/science/article/abs/pii/S0167739X19326640</a></td>
+            </tr>
+            <tr>
+              <td>Engineering-to-BioMimetic Ontology (E2BMO)</td>
+              <td><a href="https://www.mdpi.com/2411-9660/2/4/53">https://www.mdpi.com/2411-9660/2/4/53</a></td>
+            </tr>
+            <tr>
+              <td>Environment Ontology</td>
+              <td><a href="http://obofoundry.org/ontology/envo.html">http://obofoundry.org/ontology/envo.html</a></td>
+            </tr>
+            <tr>
+              <td>Epidemiology Ontology (EPO)</td>
+              <td><a href="http://obofoundry.org/ontology/epo.html">http://obofoundry.org/ontology/epo.html</a></td>
+            </tr>
+            <tr>
+              <td>Epilepsy Ontology (EPIO)</td>
+              <td><a href="https://www.researchsquare.com/article/rs-1259791/v1">https://www.researchsquare.com/article/rs-1259791/v1</a></td>
+            </tr>
+            <tr>
+              <td>Epilepsy and Seizure Ontology (EPSO)</td>
+              <td><a href="http://www.ncbi.nlm.nih.gov/pubmed/23686934">http://www.ncbi.nlm.nih.gov/pubmed/23686934</a></td>
+            </tr>
+            <tr>
+              <td>EuPath Ontology</td>
+              <td><a href="https://bioportal.bioontology.org/ontologies/EUPATH/?p=summary">https://bioportal.bioontology.org/ontologies/EUPATH/?p=summary</a></td>
+            </tr>
+            <tr>
+              <td>European Materials Modeling Ontology (EMMO)</td>
+              <td><a href="https://emmc.info/wp-content/uploads/2017/12/EMMC_IntOp2017-Cambridge_Ghedini_Bologna.pdf">https://emmc.info/wp-content/uploads/2017/12/EMMC_IntOp2017-Cambridge_Ghedini_Bologna.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Event-Based Functional Behavior Ontology (EFBO)</td>
+              <td><a href="http://ceur-ws.org/Vol-1660/caos-paper2.pdf">http://ceur-ws.org/Vol-1660/caos-paper2.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Event-Based Ontology for Historical Description (EOHD)</td>
+              <td><a href="https://www.emeraldinsight.com/doi/abs/10.1108/DLP-02-2018-0005">https://www.emeraldinsight.com/doi/abs/10.1108/DLP-02-2018-0005</a></td>
+            </tr>
+            <tr>
+              <td>Evolution Ontology (EO)</td>
+              <td><a href="http://code.google.com/p/evolution-ontology">http://code.google.com/p/evolution-ontology</a></td>
+            </tr>
+            <tr>
+              <td>Experimental Factor Ontology (EFO)</td>
+              <td><a href="http://www.ebi.ac.uk/efo">http://www.ebi.ac.uk/efo</a></td>
+            </tr>
+            <tr>
+              <td>Exposé</td>
+              <td><a href="https://lirias.kuleuven.be/bitstream/123456789/273222/1/sokd10.pdf">https://lirias.kuleuven.be/bitstream/123456789/273222/1/sokd10.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Extensible Neuroimaging Archive Toolkit (XNAT)</td>
+              <td><a href="http://www.aifb.kit.edu/images/e/e5/Sfb-infrastructure-spie2016.pdf">http://www.aifb.kit.edu/images/e/e5/Sfb-infrastructure-spie2016.pdf</a></td>
+            </tr>
+            <tr>
+              <td>FASTO Ontology (incorporates BFO, FHIR, CPG,and SSN)</td>
+              <td><a href="https://bioportal.bioontology.org/ontologies/FASTO">https://bioportal.bioontology.org/ontologies/FASTO</a></td>
+            </tr>
+            <tr>
+              <td>Feedback Intervention Ontology (FIO)</td>
+              <td><a href="https://github.com/Display-Lab">https://github.com/Display-Lab</a></td>
+            </tr>
+            <tr>
+              <td>Financial Documents Ontology (FIN)</td>
+              <td><a href="http://ceur-ws.org/Vol-2969/paper57-SoLEE.pdf">http://ceur-ws.org/Vol-2969/paper57-SoLEE.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Fission Yeast Phenotype Ontology (FYPO)</td>
+              <td><a href="http://www.pombase.org/documentation/gene-page-phenotypes">http://www.pombase.org/documentation/gene-page-phenotypes</a></td>
+            </tr>
+            <tr>
+              <td>Flower-Visiting Domain Ontology (FV), Known Flower-Visiting Group Domain Ontology (KFG), Flower-Visiting Behavior Application Ontology (FVB) and Observation-Date Application Ontology (OBD)</td>
+              <td><a href="http://www.sciencedirect.com/science/article/pii/S157495411400082X">http://www.sciencedirect.com/science/article/pii/S157495411400082X</a></td>
+            </tr>
+            <tr>
+              <td>Flybase Drosophila Anatomy Ontology (DAO)</td>
+              <td><a href="http://obofoundry.org/ontology/fbbt.html">http://obofoundry.org/ontology/fbbt.html</a></td>
+            </tr>
+            <tr>
+              <td>Flybase Drosophila Phenotype Ontology (FYPO)</td>
+              <td><a href="http://obofoundry.org/ontology/fypo.html">http://obofoundry.org/ontology/fypo.html</a></td>
+            </tr>
+            <tr>
+              <td>Food Ontology (FoodOn)</td>
+              <td><a href="http://obofoundry.org/ontology/foodon.html">http://obofoundry.org/ontology/foodon.html</a></td>
+            </tr>
+            <tr>
+              <td>Food Recipe Ingredient Substitution Ontology (FRISO)</td>
+              <td><a href="https://doi.org/10.3390/s22031095">https://doi.org/10.3390/s22031095</a></td>
+            </tr>
+            <tr>
+              <td>Food-Energy-Water Systems Ontology (FEWsONT)</td>
+              <td><a href="https://www.liebertpub.com/doi/full/10.1089/ees.2018.0551">https://www.liebertpub.com/doi/full/10.1089/ees.2018.0551</a></td>
+            </tr>
+            <tr>
+              <td>Foundational Model of Anatomy (FMA)</td>
+              <td><a href="http://obofoundry.org/ontology/fma.html">http://obofoundry.org/ontology/fma.html</a></td>
+            </tr>
+            <tr>
+              <td>Framework for Semantic Workflow Composition in the Geology Domain</td>
+              <td><a href="http://ceur-ws.org/Vol-2228/abstract6.pdf">http://ceur-ws.org/Vol-2228/abstract6.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Gastrointestinal Endoscopy Ontology (GIEO)</td>
+              <td><a href="http://ceur-ws.org/Vol-833/paper36.pdf">http://ceur-ws.org/Vol-833/paper36.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Gender, Sex, and Sexual Orientation (GSSO) ontology</td>
+              <td><a href="https://academic-oup-com.gate.lib.buffalo.edu/jamia/advance-article-abstract/doi/10.1093/jamia/ocaa061/5858296">https://academic-oup-com.gate.lib.buffalo.edu/jamia/advance-article-abstract/doi/10.1093/jamia/ocaa061/5858296</a></td>
+            </tr>
+            <tr>
+              <td>Gene Ontology (GO)</td>
+              <td><a href="http://obofoundry.org/ontology/go.html">http://obofoundry.org/ontology/go.html</a></td>
+            </tr>
+            <tr>
+              <td>Gene Regulation Ontology (GRO)</td>
+              <td><a href="https://ub-madoc.bib.uni-mannheim.de/35191/1/dissertation_beisswanger.pdf">https://ub-madoc.bib.uni-mannheim.de/35191/1/dissertation_beisswanger.pdf</a></td>
+            </tr>
+            <tr>
+              <td>General Information Model (GIM)</td>
+              <td><a href="http://jamia.bmj.com/content/20/5/986.full">http://jamia.bmj.com/content/20/5/986.full</a></td>
+            </tr>
+            <tr>
+              <td>Genomic Epidemiology Ontology (GenEpiO)</td>
+              <td><a href="http://obofoundry.org/ontology/genepio.html">http://obofoundry.org/ontology/genepio.html</a></td>
+            </tr>
+            <tr>
+              <td>Genomic Feature and Variation Ontology (GFVO)</td>
+              <td><a href="https://peerj.com/articles/933/">https://peerj.com/articles/933/</a></td>
+            </tr>
+            <tr>
+              <td>GeoCore Geology Ontology</td>
+              <td><a href="https://www.lume.ufrgs.br/bitstream/handle/10183/225741/001129935.pdf">https://www.lume.ufrgs.br/bitstream/handle/10183/225741/001129935.pdf</a></td>
+            </tr>
+            <tr>
+              <td>GeoReservoir Ontology</td>
+              <td><a href="https://doi.org/10.1016/j.cageo.2021.105005">https://doi.org/10.1016/j.cageo.2021.105005</a></td>
+            </tr>
+            <tr>
+              <td>GeoReservoir ontology for deep-marine depositional system geometry</td>
+              <td><a href="https://www.sciencedirect.com/science/article/pii/S0098300421002880">https://www.sciencedirect.com/science/article/pii/S0098300421002880</a></td>
+            </tr>
+            <tr>
+              <td>Geographical Entity Ontology (GEO)</td>
+              <td><a href="http://www.obofoundry.org/ontology/geo.html">http://www.obofoundry.org/ontology/geo.html</a></td>
+            </tr>
+            <tr>
+              <td>Gestalt</td>
+              <td><a href="https://ieeexplore.ieee.org/abstract/document/6956738">https://ieeexplore.ieee.org/abstract/document/6956738</a></td>
+            </tr>
+            <tr>
+              <td>Global Electronic Health Record Ontology (G-EHR-O)</td>
+              <td><a href="https://www.sciencedirect.com/science/article/pii/S1569190X18301114">https://www.sciencedirect.com/science/article/pii/S1569190X18301114</a></td>
+            </tr>
+            <tr>
+              <td>Good Ontology Design (GoodOD)</td>
+              <td><a href="http://portal.uni-freiburg.de/imbi/sections/mi-en/projects/goodod?set_language=en">http://portal.uni-freiburg.de/imbi/sections/mi-en/projects/goodod?set_language=en</a></td>
+            </tr>
+            <tr>
+              <td>Graphs, Objects, Points, Properties, Roles, and Relationships Ontology (GOPPRRE)</td>
+              <td><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9534721">https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9534721</a></td>
+            </tr>
+            <tr>
+              <td>HERMES 4D Printing Ontology</td>
+              <td><a href="https://www.sciencedirect.com/science/article/pii/S0264127521007486">https://www.sciencedirect.com/science/article/pii/S0264127521007486</a></td>
+            </tr>
+            <tr>
+              <td>HIGHFLEET</td>
+              <td><a href="http://www.highfleet.com/">http://www.highfleet.com/</a></td>
+            </tr>
+            <tr>
+              <td>Health Data Ontology Trunk (HDOT)</td>
+              <td><a href="http://purl.org/hdot">http://purl.org/hdot</a></td>
+            </tr>
+            <tr>
+              <td>Hemocomponents and Hemoderivatives Ontology (HEMONTO)</td>
+              <td><a href="http://mba.eci.ufmg.br/downloads/ontobras-2013_paper1.pdf">http://mba.eci.ufmg.br/downloads/ontobras-2013_paper1.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Host Pathogen Interactions Ontology (HPO)</td>
+              <td><a href="http://bioportal.bioontology.org/ontologies/HPIO?p=classes">http://bioportal.bioontology.org/ontologies/HPIO?p=classes</a></td>
+            </tr>
+            <tr>
+              <td>Human Activity and Infrastructure Foundry (HAIF)</td>
+              <td><a href="https://arxiv.org/ftp/arxiv/papers/1809/1809.09548.pdf">https://arxiv.org/ftp/arxiv/papers/1809/1809.09548.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Human Disease Ontology (DOID)</td>
+              <td><a href="http://www.obofoundry.org/ontology/doid.html">http://www.obofoundry.org/ontology/doid.html</a></td>
+            </tr>
+            <tr>
+              <td>Human Experience Realist Ontology (HERO)</td>
+              <td><a href="https://www.researchgate.net/publication/316557588_A_Human_Experience_Realist_Ontology_in_Basic_Formal_Ontology">https://www.researchgate.net/publication/316557588_A_Human_Experience_Realist_Ontology_in_Basic_Formal_Ontology</a></td>
+            </tr>
+            <tr>
+              <td>Human Interaction Network Ontology (HINO)</td>
+              <td><a href="http://arxiv.org/pdf/1311.3355.pdf">http://arxiv.org/pdf/1311.3355.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Human Physiology Simulation Ontology (HuPSON)</td>
+              <td><a href="http://www.jbiomedsem.com/content/pdf/2041-1480-4-35.pdf">http://www.jbiomedsem.com/content/pdf/2041-1480-4-35.pdf</a></td>
+            </tr>
+            <tr>
+              <td>INRIA Lorraine Research Unit</td>
+              <td><a href="http://www.inria.fr/inria/organigramme/fiche_ur-lor.en.html">http://www.inria.fr/inria/organigramme/fiche_ur-lor.en.html</a></td>
+            </tr>
+            <tr>
+              <td>Infectious Disease Ontology</td>
+              <td><a href="http://obofoundry.org/ontology/ido.html">http://obofoundry.org/ontology/ido.html</a></td>
+            </tr>
+            <tr>
+              <td>Influenza Research Database (IRD)</td>
+              <td><a href="http://www.fludb.org/brc/home.spg?decorator=influenza">http://www.fludb.org/brc/home.spg?decorator=influenza</a></td>
+            </tr>
+            <tr>
+              <td>Information Artifact Ontology (IAO)</td>
+              <td><a href="http://obofoundry.org/ontology/iao.html">http://obofoundry.org/ontology/iao.html</a></td>
+            </tr>
+            <tr>
+              <td>Information Security Domain (ISD) ontology</td>
+              <td><a href="https://ieeexplore.ieee.org/abstract/document/8795392">https://ieeexplore.ieee.org/abstract/document/8795392</a></td>
+            </tr>
+            <tr>
+              <td>Informed Consent Ontology (ICO)</td>
+              <td><a href="http://ceur-ws.org/Vol-2285/ICBO_2018_paper_59.pdf">http://ceur-ws.org/Vol-2285/ICBO_2018_paper_59.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Innovative Capabilities of Additive Manufacturing (ICAM) Ontology</td>
+              <td><a href="http://computingengineering.asmedigitalcollection.asme.org/article.aspx?articleid=2674329">http://computingengineering.asmedigitalcollection.asme.org/article.aspx?articleid=2674329</a></td>
+            </tr>
+            <tr>
+              <td>Institute for Defense Analysis</td>
+              <td><a href="http://www.ida.org/">http://www.ida.org/</a></td>
+            </tr>
+            <tr>
+              <td>Integrated Framework for Additively Manufactured Products (IFAMP) ontology</td>
+              <td><a href="https://buffalo.app.box.com/v/integrating-ontologies">https://buffalo.app.box.com/v/integrating-ontologies</a></td>
+            </tr>
+            <tr>
+              <td>Interaction Network Ontology (INO)</td>
+              <td><a href="http://www.cmpe.boun.edu.tr/~ozgur/papers/VDOS2014.pdf">http://www.cmpe.boun.edu.tr/~ozgur/papers/VDOS2014.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Interdisciplinary Prostate Ontology Project (IPOP)</td>
+              <td><a href="http://ipop.ontodev.com/">http://ipop.ontodev.com/</a></td>
+            </tr>
+            <tr>
+              <td>International Center for Food Ontology, Operability, Data and Semantics (IC-FOODS)</td>
+              <td><a href="http://www.ic-foods.org/">http://www.ic-foods.org/</a></td>
+            </tr>
+            <tr>
+              <td>International Classification of Diseases Ontology (ICDO)</td>
+              <td>No Link Available</td>
+            </tr>
+            <tr>
+              <td>Interoperative Neuromonitoring Ontology (IOM)</td>
+              <td><a href="https://pubmed.ncbi.nlm.nih.gov/35062118/">https://pubmed.ncbi.nlm.nih.gov/35062118/</a></td>
+            </tr>
+            <tr>
+              <td>Intervention Setting Ontology</td>
+              <td><a href="https://wellcomeopenresearch.org/articles/5-124">https://wellcomeopenresearch.org/articles/5-124</a></td>
+            </tr>
+            <tr>
+              <td>Intracranial Aneurysm (ICA) Ontology</td>
+              <td><a href="http://www.sciencedirect.com/science/article/pii/S1532046415000519">http://www.sciencedirect.com/science/article/pii/S1532046415000519</a></td>
+            </tr>
+            <tr>
+              <td>Iranian Traditional Medicine General Ontology (IrGO)</td>
+              <td><a href="https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-021-00237-1">https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-021-00237-1</a></td>
+            </tr>
+            <tr>
+              <td>Japan Advanced Institute of Science and Technology (JAIST)</td>
+              <td><a href="http://www.jaist.ac.jp/ks/english/">http://www.jaist.ac.jp/ks/english/</a></td>
+            </tr>
+            <tr>
+              <td>Johns Hopkins University Applied Physics Lab</td>
+              <td><a href="http://www.jhuapl.edu/">http://www.jhuapl.edu/</a></td>
+            </tr>
+            <tr>
+              <td>Knowledge Base Of Biomedicine (KaBOB)</td>
+              <td><a href="http://www.biomedcentral.com/content/pdf/s12859-015-0559-3.pdf">http://www.biomedcentral.com/content/pdf/s12859-015-0559-3.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Knowledge Object Reference Ontology (KORO)</td>
+              <td><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/lrh2.10054">https://onlinelibrary.wiley.com/doi/full/10.1002/lrh2.10054</a></td>
+            </tr>
+            <tr>
+              <td>Kobe University, Graduate School of Medicine, Department of Sociomedical Informatics</td>
+              <td><a href="http://www.med.kobe-u.ac.jp/">http://www.med.kobe-u.ac.jp/</a></td>
+            </tr>
+            <tr>
+              <td>L3 Data Tactics Corporation</td>
+              <td><a href="https://www.data-tactics.com/">https://www.data-tactics.com/</a></td>
+            </tr>
+            <tr>
+              <td>Language and Computing</td>
+              <td><a href="http://www.landcglobal.com/">http://www.landcglobal.com/</a></td>
+            </tr>
+            <tr>
+              <td>Library of Integrated Network-based Cellular Signatures</td>
+              <td><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-017-1981-5">https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-017-1981-5</a></td>
+            </tr>
+            <tr>
+              <td>Lipid Ontology</td>
+              <td><a href="http://obofoundry.org/ontology/lipro.html">http://obofoundry.org/ontology/lipro.html</a></td>
+            </tr>
+            <tr>
+              <td>Literary Theme Ontology (LTO)</td>
+              <td><a href="https://github.com/theme-ontology/lto">https://github.com/theme-ontology/lto</a></td>
+            </tr>
+            <tr>
+              <td>MIRO and IRbase</td>
+              <td><a href="http://www.plosntds.org/article/info:doi/10.1371/journal.pntd.0000465">http://www.plosntds.org/article/info:doi/10.1371/journal.pntd.0000465</a></td>
+            </tr>
+            <tr>
+              <td>MOCA (Multi-attribute Ontology-based Criticality Analysis)</td>
+              <td><a href="https://link.springer.com/article/10.1007/s43684-022-00021-7">https://link.springer.com/article/10.1007/s43684-022-00021-7</a></td>
+            </tr>
+            <tr>
+              <td>Machine Learning Schema (ML-Schema) ontology</td>
+              <td><a href="https://openreview.net/pdf?id=B1e8MrXVxQ">https://openreview.net/pdf?id=B1e8MrXVxQ</a></td>
+            </tr>
+            <tr>
+              <td>Maintenance Activity Reference Ontology</td>
+              <td><a href="http://www.semantic-web-journal.net/system/files/swj3067.pdf">http://www.semantic-web-journal.net/system/files/swj3067.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Major histocompatibility complex (MHC) Restriction Ontology (MRO)</td>
+              <td><a href="http://obofoundry.org/ontology/mro.html">http://obofoundry.org/ontology/mro.html</a></td>
+            </tr>
+            <tr>
+              <td>Malaria Ontology (IDOMAL)</td>
+              <td><a href="http://obofoundry.org/ontology/idomal.html">http://obofoundry.org/ontology/idomal.html</a></td>
+            </tr>
+            <tr>
+              <td>Manufacturing Service Description Language (MSDL) ontology</td>
+              <td><a href="https://link.springer.com/chapter/10.1007/978-3-319-99707-0_40">https://link.springer.com/chapter/10.1007/978-3-319-99707-0_40</a></td>
+            </tr>
+            <tr>
+              <td>Manufacturing Supply Chain Ontology (MSCO)</td>
+              <td><a href="https://buffalo.box.com/s/rbapg73v4jq18dvw0rf2jnszndvnxmb0">https://buffalo.box.com/s/rbapg73v4jq18dvw0rf2jnszndvnxmb0</a></td>
+            </tr>
+            <tr>
+              <td>Medical University Graz - Institute of Medical Informatics, Statistics and Documentation</td>
+              <td><a href="http://user.medunigraz.at/stefan.schulz">http://user.medunigraz.at/stefan.schulz</a></td>
+            </tr>
+            <tr>
+              <td>Medication Adherence Behavior Ontology (MAB-Ontology)</td>
+              <td><a href="https://scholarworks.iupui.edu/bitstream/handle/1805/17767/Sawesi_iupui_0104D_10326.pdf">https://scholarworks.iupui.edu/bitstream/handle/1805/17767/Sawesi_iupui_0104D_10326.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Mental Disease Ontology (MFO-MD)</td>
+              <td><a href="http://obofoundry.org/ontology/mfomd.html">http://obofoundry.org/ontology/mfomd.html</a></td>
+            </tr>
+            <tr>
+              <td>Mental Functioning Ontology (MF)</td>
+              <td><a href="http://obofoundry.org/ontology/mf.html">http://obofoundry.org/ontology/mf.html</a></td>
+            </tr>
+            <tr>
+              <td>Microbiology Ontology (MicrO)</td>
+              <td><a href="http://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-016-0060-6">http://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-016-0060-6</a></td>
+            </tr>
+            <tr>
+              <td>Middle Layer Ontology for Clinical Care (MLOCC)</td>
+              <td><a href="http://p-medicine.eu/project/wp-4">http://p-medicine.eu/project/wp-4</a></td>
+            </tr>
+            <tr>
+              <td>Military Ontology</td>
+              <td><a href="http://basic-formal-ontology.org/publications#salmen">http://basic-formal-ontology.org/publications#salmen</a></td>
+            </tr>
+            <tr>
+              <td>Military Scenario Ontology (MSO)</td>
+              <td><a href="http://link.springer.com/article/10.1007/s10489-016-0834-7">http://link.springer.com/article/10.1007/s10489-016-0834-7</a></td>
+            </tr>
+            <tr>
+              <td>Minimum Information Model for Patient Safety (MIMPS)</td>
+              <td><a href="http://www.ncbi.nlm.nih.gov/pubmed/27139388">http://www.ncbi.nlm.nih.gov/pubmed/27139388</a></td>
+            </tr>
+            <tr>
+              <td>Mission and Means Framework (MMF) Ontology</td>
+              <td><a href="https://ieeexplore.ieee.org/abstract/document/8455742/">https://ieeexplore.ieee.org/abstract/document/8455742/</a></td>
+            </tr>
+            <tr>
+              <td>Modal Relation Ontology (MRO)</td>
+              <td><a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10635/106350H/Problems-with-prescriptions--disentangling-data-about-actual-versus-prescribed/10.1117/12.2307718.short?SSO=1">https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10635/106350H/Problems-with-prescriptions--disentangling-data-about-actual-versus-prescribed/10.1117/12.2307718.short?SSO=1</a></td>
+            </tr>
+            <tr>
+              <td>Mode of Delivery (MoD) Ontology</td>
+              <td><a href="https://wellcomeopenresearch.org/articles/5-125">https://wellcomeopenresearch.org/articles/5-125</a></td>
+            </tr>
+            <tr>
+              <td>Model for Clinical Information (MCI)</td>
+              <td><a href="http://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-016-0248-9">http://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-016-0248-9</a></td>
+            </tr>
+            <tr>
+              <td>Model for Describing Insect Anatomical Structures (MoDIAS)</td>
+              <td><a href="https://www.preprints.org/manuscript/202201.0254/v1">https://www.preprints.org/manuscript/202201.0254/v1</a></td>
+            </tr>
+            <tr>
+              <td>Modular Environmental Modeling Ontology (MEMOn)</td>
+              <td><a href="https://ieeexplore-ieee-org.gate.lib.buffalo.edu/abstract/document/8599597">https://ieeexplore-ieee-org.gate.lib.buffalo.edu/abstract/document/8599597</a></td>
+            </tr>
+            <tr>
+              <td>Mouse Pathology Ontology (MPATH)</td>
+              <td><a href="http://obofoundry.org/ontology/mpath.html">http://obofoundry.org/ontology/mpath.html</a></td>
+            </tr>
+            <tr>
+              <td>NMR-Instrument Component of Metabolomics Investigations Ontology</td>
+              <td><a href="http://bioportal.bioontology.org/ontologies/NMR?p=classes&amp;conceptid=root">http://bioportal.bioontology.org/ontologies/NMR?p=classes&amp;conceptid=root</a></td>
+            </tr>
+            <tr>
+              <td>Name Reaction Ontology (RXNO)</td>
+              <td><a href="http://obofoundry.org/ontology/rxno.html">http://obofoundry.org/ontology/rxno.html</a></td>
+            </tr>
+            <tr>
+              <td>Nanoparticle Ontology (NPO)</td>
+              <td><a href="http://www.ncbi.nlm.nih.gov/pubmed/20211274">http://www.ncbi.nlm.nih.gov/pubmed/20211274</a></td>
+            </tr>
+            <tr>
+              <td>Nanoparticles Impact on Human Cell morphology Ontology (NIHCO)</td>
+              <td><a href="https://www.bjbabe.ro/wp-content/uploads/2017/10/18_RODINO.pdf">https://www.bjbabe.ro/wp-content/uploads/2017/10/18_RODINO.pdf</a></td>
+            </tr>
+            <tr>
+              <td>National Center for Multi-Source Information Fusion</td>
+              <td><a href="http://www.infofusion.buffalo.edu/">http://www.infofusion.buffalo.edu/</a></td>
+            </tr>
+            <tr>
+              <td>Neomark Oral Cancer Ontology (NEOMARK4)</td>
+              <td><a href="https://bioportal.bioontology.org/ontologies/NEOMARK4">https://bioportal.bioontology.org/ontologies/NEOMARK4</a></td>
+            </tr>
+            <tr>
+              <td>Neural Electromagnetic Ontologies (NEMO)</td>
+              <td><a href="http://nemo.nic.uoregon.edu/">http://nemo.nic.uoregon.edu/</a></td>
+            </tr>
+            <tr>
+              <td>NeuroPsychological Testing Ontology (NPT)</td>
+              <td><a href="http://www.unbsj.ca/sase/csas/data/ws/icbo2013/papers/research/icbo2013_submission_31.pdf">http://www.unbsj.ca/sase/csas/data/ws/icbo2013/papers/research/icbo2013_submission_31.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Neuroscience Information Framework</td>
+              <td><a href="http://www.neuinfo.org/">http://www.neuinfo.org/</a></td>
+            </tr>
+            <tr>
+              <td>Neuroscience Information Framework Cell Ontology (NIFCELL)</td>
+              <td><a href="https://bioportal.bioontology.org/ontologies/NIFCELL">https://bioportal.bioontology.org/ontologies/NIFCELL</a></td>
+            </tr>
+            <tr>
+              <td>Neuroscience Information Framework Dysfunction Ontology (NIFDYS)</td>
+              <td><a href="https://bioportal.bioontology.org/ontologies/NIFDYS">https://bioportal.bioontology.org/ontologies/NIFDYS</a></td>
+            </tr>
+            <tr>
+              <td>Neuroscience Information Framework Standard Ontology (NIFSTD)</td>
+              <td><a href="http://bioportal.bioontology.org/ontologies/NIFSTD">http://bioportal.bioontology.org/ontologies/NIFSTD</a></td>
+            </tr>
+            <tr>
+              <td>Next Generation Sequencing Ontology (NGSONTO)</td>
+              <td><a href="https://github.com/lindenb/ngs-ontology">https://github.com/lindenb/ngs-ontology</a></td>
+            </tr>
+            <tr>
+              <td>Next-Generation Biobanking Ontology (NGBO)</td>
+              <td><a href="http://ceur-ws.org/Vol-2180/paper-02.pdf">http://ceur-ws.org/Vol-2180/paper-02.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Non-Coding RNA Ontology (NCRO)</td>
+              <td><a href="http://soc.southalabama.edu/~huang/papers/BIBM-15-1.pdf">http://soc.southalabama.edu/~huang/papers/BIBM-15-1.pdf</a></td>
+            </tr>
+            <tr>
+              <td>OBDMR: An Ontology-Based Data Model for Railways</td>
+              <td><a href="https://doi.org/10.1166/jctn.2020.8662">https://doi.org/10.1166/jctn.2020.8662</a></td>
+            </tr>
+            <tr>
+              <td>OBR Scolio (scoliosis) ontology</td>
+              <td><a href="https://www.sciencedirect.com/science/article/pii/S0169260719300665">https://www.sciencedirect.com/science/article/pii/S0169260719300665</a></td>
+            </tr>
+            <tr>
+              <td>OSTHUS</td>
+              <td><a href="https://www.youtube.com/watch?v=WKuK2G-NUk8">https://www.youtube.com/watch?v=WKuK2G-NUk8</a></td>
+            </tr>
+            <tr>
+              <td>Ocular Disease Ontology (ODO)</td>
+              <td><a href="http://www.unbsj.ca/sase/csas/data/ws/icbo2013/papers/posters/icbo2013_submission_67.pdf">http://www.unbsj.ca/sase/csas/data/ws/icbo2013/papers/posters/icbo2013_submission_67.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Ocular Immune-Mediated Inflammatory Diseases Ontology (OcIMIDo)</td>
+              <td><a href="https://www.sciencedirect.com/science/article/pii/S001048252100336X">https://www.sciencedirect.com/science/article/pii/S001048252100336X</a></td>
+            </tr>
+            <tr>
+              <td>OncoCL-KB</td>
+              <td><a href="http://ceur-ws.org/Vol-1546/poster_65.pdf">http://ceur-ws.org/Vol-1546/poster_65.pdf</a></td>
+            </tr>
+            <tr>
+              <td>OntoAlign++</td>
+              <td><a href="http://ceur-ws.org/Vol-1041/ontobras-2013_paper52.pdf">http://ceur-ws.org/Vol-1041/ontobras-2013_paper52.pdf</a></td>
+            </tr>
+            <tr>
+              <td>OntoCAT</td>
+              <td><a href="http://www.ontocat.org/">http://www.ontocat.org/</a></td>
+            </tr>
+            <tr>
+              <td>OntoCOG</td>
+              <td><a href="http://ontobat.hegroup.org/">http://ontobat.hegroup.org/</a></td>
+            </tr>
+            <tr>
+              <td>OntoDM Core</td>
+              <td><a href="http://www.ontodm.com/doku.php?id=ontodm-core">http://www.ontodm.com/doku.php?id=ontodm-core</a></td>
+            </tr>
+            <tr>
+              <td>OntoForInfoScience</td>
+              <td><a href="http://www2.marilia.unesp.br/revistas/index.php/bjis/article/viewFile/5426/3970">http://www2.marilia.unesp.br/revistas/index.php/bjis/article/viewFile/5426/3970</a></td>
+            </tr>
+            <tr>
+              <td>OntoMaton</td>
+              <td><a href="http://isa-tools.org/">http://isa-tools.org/</a></td>
+            </tr>
+            <tr>
+              <td>Ontologies for Representing Surgical Procedure Models (OntoSPM)</td>
+              <td><a href="https://ontospm.univ-rennes1.fr/doku.php?id=ontology">https://ontospm.univ-rennes1.fr/doku.php?id=ontology</a></td>
+            </tr>
+            <tr>
+              <td>Ontologized Minimum Information About BIobank data Sharing (OMIABIS)</td>
+              <td><a href="http://obofoundry.org/ontology/omiabis.html">http://obofoundry.org/ontology/omiabis.html</a></td>
+            </tr>
+            <tr>
+              <td>Ontology Based Clinical Decision Support System for Geriatrics</td>
+              <td><a href="https://www.ingentaconnect.com/contentone/asp/jctn/2020/00000017/00000001/art00042">https://www.ingentaconnect.com/contentone/asp/jctn/2020/00000017/00000001/art00042</a></td>
+            </tr>
+            <tr>
+              <td>Ontology Based Decision Support System for Tuberculosis Management and Control</td>
+              <td><a href="https://www.researchgate.net/publication/312296048">https://www.researchgate.net/publication/312296048</a></td>
+            </tr>
+            <tr>
+              <td>Ontology Research Group</td>
+              <td><a href="http://org.buffalo.edu/">http://org.buffalo.edu/</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Adverse Events (OAE)</td>
+              <td><a href="http://obofoundry.org/ontology/oae.html">http://obofoundry.org/ontology/oae.html</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Autism Spectrum Disorder</td>
+              <td><a href="http://www.sciencedirect.com/science/article/pii/S1532046415001367">http://www.sciencedirect.com/science/article/pii/S1532046415001367</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Biobanking (OBIB)</td>
+              <td><a href="http://obofoundry.org/ontology/obib.html">http://obofoundry.org/ontology/obib.html</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Biomedical Investigations (OBI)</td>
+              <td><a href="http://obofoundry.org/ontology/obi.html">http://obofoundry.org/ontology/obi.html</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Cancer research variables (OCRV)</td>
+              <td><a href="https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-018-0636-4">https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-018-0636-4</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Computable Eligibility Criteria - Hepatitis C Virus (OCEC-HCV)</td>
+              <td><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371316/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371316/</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Dengue Fever (IDODEN)</td>
+              <td><a href="http://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0003479">http://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0003479</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Documentation of Variable/Data Source Selection (ODVDS)</td>
+              <td><a href="http://ceur-ws.org/Vol-2427/SEPDA_2019_paper_15.pdf">http://ceur-ws.org/Vol-2427/SEPDA_2019_paper_15.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Drug Discovery Investigations (DDI)</td>
+              <td><a href="http://purl.org/ddi/home">http://purl.org/ddi/home</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Energy Investigations (OEI)</td>
+              <td><a href="https://www.researchgate.net/publication/234128482_Facilitating_Knowledge_Sharing_and_Analysis_in_Energy_Informatics_with_the_Ontology_for_Energy_Investigations_%28OEI%29">https://www.researchgate.net/publication/234128482_Facilitating_Knowledge_Sharing_and_Analysis_in_Energy_Informatics_with_the_Ontology_for_Energy_Investigations_%28OEI%29</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Functionally Graded Materials (OFGM)</td>
+              <td><a href="https://www.academia.edu/27922525/Development_of_a_Manufacturing_Ontology_for_Functionally_Graded_Materials">https://www.academia.edu/27922525/Development_of_a_Manufacturing_Ontology_for_Functionally_Graded_Materials</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for General Medical Science (OGMS)</td>
+              <td><a href="http://obofoundry.org/ontology/ogms.html">http://obofoundry.org/ontology/ogms.html</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Genes and Genomes - Mouse (OGG-MM)</td>
+              <td><a href="http://www.ontobee.org/ontology/OGG-Mm">http://www.ontobee.org/ontology/OGG-Mm</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Genetic Interval (OGI)</td>
+              <td><a href="http://bioportal.bioontology.org/ontologies/OGI?p=classes&amp;conceptid=root">http://bioportal.bioontology.org/ontologies/OGI?p=classes&amp;conceptid=root</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Guiding Appropriate Antibiotic Prescribing</td>
+              <td><a href="http://www.sciencedirect.com/science/article/pii/S1532046411001675">http://www.sciencedirect.com/science/article/pii/S1532046411001675</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Information Science (OntoforInforScience)</td>
+              <td><a href="https://www.researchgate.net/publication/299534658_OntoforInfoScience_a_detailed_methodology_for_construction_of_ontologies_and_its_application_in_the_blood_domain">https://www.researchgate.net/publication/299534658_OntoforInfoScience_a_detailed_methodology_for_construction_of_ontologies_and_its_application_in_the_blood_domain</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Laparoscopic Surgeries (LapOntoSPM)</td>
+              <td><a href="http://link.springer.com/article/10.1007/s11548-015-1222-1">http://link.springer.com/article/10.1007/s11548-015-1222-1</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for MIcroRNA Target Prediction (OMIT)</td>
+              <td><a href="http://obofoundry.org/ontology/omit.html">http://obofoundry.org/ontology/omit.html</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Newborn Screening and Translational Research (ONSTR)</td>
+              <td><a href="http://code.google.com/p/onstr">http://code.google.com/p/onstr</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Next Generation Sequencing Experiments (NGS Ontology)</td>
+              <td><a href="https://github.com/lindenb/ngs-ontology">https://github.com/lindenb/ngs-ontology</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Nutritional Epidemiology (ONE)</td>
+              <td><a href="https://obofoundry.org/ontology/one.html">https://obofoundry.org/ontology/one.html</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Nutritional Studies (ONS)</td>
+              <td><a href="https://genesandnutrition.biomedcentral.com/articles/10.1186/s12263-018-0601-y">https://genesandnutrition.biomedcentral.com/articles/10.1186/s12263-018-0601-y</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Pain and Related Disability, Mental Health and Quality of Life (OPMQoL)</td>
+              <td><a href="http://www.referent-tracking.com/RTU/?page=projects.phtml#opmqol">http://www.referent-tracking.com/RTU/?page=projects.phtml#opmqol</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Parasite LifeCycle (OPL)</td>
+              <td><a href="http://obofoundry.org/ontology/opl.html">http://obofoundry.org/ontology/opl.html</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Periodontitis (PERIO)</td>
+              <td><a href="http://www.jbiomedsem.com/content/6/1/30">http://www.jbiomedsem.com/content/6/1/30</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Stem Cell Investigations (OSCI)</td>
+              <td><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-019-2723-7">https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-019-2723-7</a></td>
+            </tr>
+            <tr>
+              <td>Ontology for Thoracentesis</td>
+              <td><a href="https://www.sciencedirect.com/science/article/pii/S0933365717301525">https://www.sciencedirect.com/science/article/pii/S0933365717301525</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Arthropod Circulatory Systems (OArCS)</td>
+              <td><a href="http://obofoundry.org/ontology/oarcs.html">http://obofoundry.org/ontology/oarcs.html</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Biological and Clinical Statistics (OBCS)</td>
+              <td><a href="http://obofoundry.org/ontology/obcs.html">http://obofoundry.org/ontology/obcs.html</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Cancer Related Socialecological Variables (OCRSEV)</td>
+              <td><a href="http://ceur-ws.org/Vol-2137/ws_ONCONTO_paper_3.pdf">http://ceur-ws.org/Vol-2137/ws_ONCONTO_paper_3.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Card Sleights</td>
+              <td><a href="https://arxiv.org/abs/1903.08523">https://arxiv.org/abs/1903.08523</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Card Sleights</td>
+              <td><a href="https://arxiv.org/abs/1903.08523">https://arxiv.org/abs/1903.08523</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Cardiovascular Drug Adverse Events (OCVDAE)</td>
+              <td><a href="https://www.nature.com/articles/s41598-017-12580-4">https://www.nature.com/articles/s41598-017-12580-4</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Chinese Medicine for Rheumatism (OCMR)</td>
+              <td><a href="https://bioportal.bioontology.org/ontologies/OCMR">https://bioportal.bioontology.org/ontologies/OCMR</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Clinical Research (OCRe)</td>
+              <td><a href="http://code.google.com/p/ontology-of-clinical-research/source/browse/trunk/Archive/OCRe-with-BFO.owl">http://code.google.com/p/ontology-of-clinical-research/source/browse/trunk/Archive/OCRe-with-BFO.owl</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Commercial Exchange (OCE)</td>
+              <td><a href="https://philarchive.org/archive/MERCCC">https://philarchive.org/archive/MERCCC</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Data Mining (OntoDM)</td>
+              <td><a href="http://www.ontodm.com/">http://www.ontodm.com/</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Datatypes (OntoDT)</td>
+              <td><a href="http://www.ontodt.com/">http://www.ontodt.com/</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Electronics (OOE)</td>
+              <td><a href="https://github.com/ontology-of-electronics">https://github.com/ontology-of-electronics</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Experimental Variables and Values (OOEVV)</td>
+              <td><a href="https://bioportal.bioontology.org/ontologies/OOEVV">https://bioportal.bioontology.org/ontologies/OOEVV</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Genes and Genomes (OGG)</td>
+              <td><a href="http://obofoundry.org/ontology/ogg.html">http://obofoundry.org/ontology/ogg.html</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Genetic Disease Investigations (OGDI)</td>
+              <td><a href="https://bioportal.bioontology.org/ontologies/OGDI">https://bioportal.bioontology.org/ontologies/OGDI</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Genetic Susceptibility Factor (OGSF)</td>
+              <td><a href="http://obofoundry.org/ontology/ogsf.html">http://obofoundry.org/ontology/ogsf.html</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Hemotherapy (HEMONTO)</td>
+              <td><a href="https://1library.net/document/q5946wgz-hemocomponents-hemoderivatives-ontology-hemonto-ontology-blood-components.html">https://1library.net/document/q5946wgz-hemocomponents-hemoderivatives-ontology-hemonto-ontology-blood-components.html</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Medical Microbiology (OntoMic)</td>
+              <td><a href="http://rali.iro.umontreal.ca/rali/sites/default/files/publis/Levreault-MSc.pdf">http://rali.iro.umontreal.ca/rali/sites/default/files/publis/Levreault-MSc.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Medically Related Social Entities (OMRSE)</td>
+              <td><a href="http://obofoundry.org/ontology/omrse.html">http://obofoundry.org/ontology/omrse.html</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Microbial Phenotypes (OMP)</td>
+              <td><a href="http://obofoundry.org/ontology/omp.html">http://obofoundry.org/ontology/omp.html</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Organizational Structures ofTrauma systems and Trauma centers (OOSTT)</td>
+              <td><a href="http://ceur-ws.org/Vol-1747/IT504_ICBO2016.pdf">http://ceur-ws.org/Vol-1747/IT504_ICBO2016.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Social Participation (OPS)</td>
+              <td><a href="http://arxiv.org/pdf/1501.02662.pdf">http://arxiv.org/pdf/1501.02662.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Systems Engineering</td>
+              <td><a href="https://www.sciencedirect.com/science/article/pii/S1877050919307380">https://www.sciencedirect.com/science/article/pii/S1877050919307380</a></td>
+            </tr>
+            <tr>
+              <td>Ontology of Vaccine Adverse Events (OVAE)</td>
+              <td><a href="http://obofoundry.org/ontology/ovae.html">http://obofoundry.org/ontology/ovae.html</a></td>
+            </tr>
+            <tr>
+              <td>Ontology, Logic and Technology Unit</td>
+              <td><a href="http://org.buffalo.edu/rarp/OLT%20Unit.html">http://org.buffalo.edu/rarp/OLT%20Unit.html</a></td>
+            </tr>
+            <tr>
+              <td>Ontology-Based Data Access (OBDA)</td>
+              <td><a href="http://www.sciencedirect.com.gate.lib.buffalo.edu/science/article/pii/S1570826815000165">http://www.sciencedirect.com.gate.lib.buffalo.edu/science/article/pii/S1570826815000165</a></td>
+            </tr>
+            <tr>
+              <td>Ontology-Based Operational Emergency Response (POLARISC)</td>
+              <td><a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119564034.ch52">https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119564034.ch52</a></td>
+            </tr>
+            <tr>
+              <td>Ontology-Based eXtensible Data Model (OBX)</td>
+              <td><a href="http://www.ncbi.nlm.nih.gov/pubmed/20460173">http://www.ncbi.nlm.nih.gov/pubmed/20460173</a></td>
+            </tr>
+            <tr>
+              <td>Ontology-Driven Information System (ODIS)/Ontology-Driven Scenario Generator (ODSG)</td>
+              <td><a href="http://www.sciencedirect.com/science/article/pii/S0952197615000913">http://www.sciencedirect.com/science/article/pii/S0952197615000913</a></td>
+            </tr>
+            <tr>
+              <td>Open Access Journals Integrated service System Project (GoOA)</td>
+              <td><a href="http://bioportal.bioontology.org/projects/PDOLAS">http://bioportal.bioontology.org/projects/PDOLAS</a></td>
+            </tr>
+            <tr>
+              <td>Open Model-Based Engineering Environment (OpenMBEE)</td>
+              <td><a href="https://link.springer.com/chapter/10.1007/978-3-030-82083-1_56">https://link.springer.com/chapter/10.1007/978-3-030-82083-1_56</a></td>
+            </tr>
+            <tr>
+              <td>Open PHACTS</td>
+              <td><a href="http://www.openphacts.org/">http://www.openphacts.org/</a></td>
+            </tr>
+            <tr>
+              <td>Operational Environment Ontology (OEO)</td>
+              <td><a href="https://jsou.libguides.com/ld.php?content_id=37534351">https://jsou.libguides.com/ld.php?content_id=37534351</a></td>
+            </tr>
+            <tr>
+              <td>Oral Health and Disease Ontology (OHD)</td>
+              <td><a href="http://obofoundry.org/ontology/ohd.html">http://obofoundry.org/ontology/ohd.html</a></td>
+            </tr>
+            <tr>
+              <td>Organization Ontology Based on ROR</td>
+              <td><a href="https://figshare.com/articles/presentation/An_Organization_Ontology_based_on_ROR/14839359">https://figshare.com/articles/presentation/An_Organization_Ontology_based_on_ROR/14839359</a></td>
+            </tr>
+            <tr>
+              <td>PGxO Pharmacogenomics Ontology</td>
+              <td><a href="https://www.biorxiv.org/content/biorxiv/early/2018/08/13/390971.full.pdf">https://www.biorxiv.org/content/biorxiv/early/2018/08/13/390971.full.pdf</a></td>
+            </tr>
+            <tr>
+              <td>POLARISC Emergency Response System Ontology</td>
+              <td><a href="http://idl.iscram.org/files/elmhadhbilinda/2018/1598_ElmhadhbiLinda_etal2018.pdf">http://idl.iscram.org/files/elmhadhbilinda/2018/1598_ElmhadhbiLinda_etal2018.pdf</a></td>
+            </tr>
+            <tr>
+              <td>PRISM: A Platform for Imaging inPrecision Medicine</td>
+              <td><a href="https://ascopubs.org/doi/pdfdirect/10.1200/CCI.20.00001">https://ascopubs.org/doi/pdfdirect/10.1200/CCI.20.00001</a></td>
+            </tr>
+            <tr>
+              <td>PROSPECT-IDR: Personalised Prediction of Infectious Disease Risk</td>
+              <td><a href="http://www.tara.tcd.ie/bitstream/handle/2262/86059/Final%20Version.pdf?sequence=1">http://www.tara.tcd.ie/bitstream/handle/2262/86059/Final%20Version.pdf?sequence=1</a></td>
+            </tr>
+            <tr>
+              <td>Parasite Experiment Ontology (PEO)</td>
+              <td><a href="http://bioportal.bioontology.org/ontologies/1335">http://bioportal.bioontology.org/ontologies/1335</a></td>
+            </tr>
+            <tr>
+              <td>Part-Focused Manufacturing Process Ontology (PMPO)</td>
+              <td><a href="https://www.tandfonline.com/doi/abs/10.1080/0951192X.2017.1357837">https://www.tandfonline.com/doi/abs/10.1080/0951192X.2017.1357837</a></td>
+            </tr>
+            <tr>
+              <td>Patient Safetry Categorial Structure (PS-CAST)</td>
+              <td><a href="http://person.hst.aau.dk/ska/MIE2015/Papers/SHTI210-0160.pdf">http://person.hst.aau.dk/ska/MIE2015/Papers/SHTI210-0160.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Petrochemical Ontology</td>
+              <td><a href="http://books.google.com/books?id=XYOBAusxPCcC&amp;pg=PA27&amp;lpg=PA27&amp;dq=bfo+ontology&amp;source=bl&amp;ots=4nFYXvfaMy&amp;sig=xq4BZAmY8DH0J5DMj3DE_xB4Fes&amp;hl=en&amp;ei=ZFpjStvADMaltgem27SyAg&amp;sa=X&amp;oi=book_result&amp;ct=result&amp;resnum=2">http://books.google.com/books?id=XYOBAusxPCcC&amp;pg=PA27&amp;lpg=PA27&amp;dq=bfo+ontology&amp;source=bl&amp;ots=4nFYXvfaMy&amp;sig=xq4BZAmY8DH0J5DMj3DE_xB4Fes&amp;hl=en&amp;ei=ZFpjStvADMaltgem27SyAg&amp;sa=X&amp;oi=book_result&amp;ct=result&amp;resnum=2</a></td>
+            </tr>
+            <tr>
+              <td>Phenotypic Quality Ontology (PaTO)</td>
+              <td><a href="http://obofoundry.org/ontology/pato.html">http://obofoundry.org/ontology/pato.html</a></td>
+            </tr>
+            <tr>
+              <td>Physics-Based Simulation Ontology (PSO-Physics and PSO-Sim)</td>
+              <td><a href="https://www.tandfonline.com/doi/abs/10.1080/09544828.2019.1644301?journalCode=cjen20">https://www.tandfonline.com/doi/abs/10.1080/09544828.2019.1644301?journalCode=cjen20</a></td>
+            </tr>
+            <tr>
+              <td>Plant Experimental Assay Ontology (PEAO)</td>
+              <td><a href="http://bioportal.bioontology.org/ontologies/PEAO">http://bioportal.bioontology.org/ontologies/PEAO</a></td>
+            </tr>
+            <tr>
+              <td>Plant Ontology (PO)</td>
+              <td><a href="http://obofoundry.org/ontology/po.html">http://obofoundry.org/ontology/po.html</a></td>
+            </tr>
+            <tr>
+              <td>Plastic Rock Deformation (PRD) ontology</td>
+              <td><a href="https://www-sciencedirect-com.gate.lib.buffalo.edu/science/article/pii/S0098300416308482">https://www-sciencedirect-com.gate.lib.buffalo.edu/science/article/pii/S0098300416308482</a></td>
+            </tr>
+            <tr>
+              <td>Pneumonia Ontology</td>
+              <td><a href="https://www.researchgate.net/profile/Sabrina_Azzi/publication/328171801_Design_of_a_Pneumonia_Ontology_for_Diagnosis_Decision_Support_System/links/5bbcb970299bf1049b785032/Design-of-a-Pneumonia-Ontology-for-Diagnosis-Decision-Support-System.pdf">https://www.researchgate.net/profile/Sabrina_Azzi/publication/328171801_Design_of_a_Pneumonia_Ontology_for_Diagnosis_Decision_Support_System/links/5bbcb970299bf1049b785032/Design-of-a-Pneumonia-Ontology-for-Diagnosis-Decision-Support-System.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Ponte Ontology Platform (PONTE)</td>
+              <td><a href="https://www.sciencedirect.com/science/article/pii/S1569190X18301114">https://www.sciencedirect.com/science/article/pii/S1569190X18301114</a></td>
+            </tr>
+            <tr>
+              <td>Population Health Record (PopHR)</td>
+              <td><a href="http://onlinelibrary.wiley.com/doi/10.1111/nyas.13271/full">http://onlinelibrary.wiley.com/doi/10.1111/nyas.13271/full</a></td>
+            </tr>
+            <tr>
+              <td>Population and Community Ontology (PCO)</td>
+              <td><a href="http://obofoundry.org/ontology/pco.html">http://obofoundry.org/ontology/pco.html</a></td>
+            </tr>
+            <tr>
+              <td>Porifera Ontology (PORO)</td>
+              <td><a href="http://obofoundry.org/ontology/poro.html">http://obofoundry.org/ontology/poro.html</a></td>
+            </tr>
+            <tr>
+              <td>Praxis</td>
+              <td><a href="http://www.infor-med.com/downloads/articles_downloads/Praxis_EMR_SUNY_Interoperability_Project.pdf">http://www.infor-med.com/downloads/articles_downloads/Praxis_EMR_SUNY_Interoperability_Project.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Pre-Eclampsia Ontology (PEO)</td>
+              <td><a href="http://journals.plos.org/plosone/article%3Fid%3D10.1371/journal.pone.0162828">http://journals.plos.org/plosone/article%3Fid%3D10.1371/journal.pone.0162828</a></td>
+            </tr>
+            <tr>
+              <td>PreOptique Platform for Integrated Pre-surgery Reports</td>
+              <td><a href="https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-019-0197-1">https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-019-0197-1</a></td>
+            </tr>
+            <tr>
+              <td>Precision Medicine Ontology (PMO)</td>
+              <td><a href="http://www.aimspress.com/fileOther/PDF/MBE/mbe-17-04-227.pdf">http://www.aimspress.com/fileOther/PDF/MBE/mbe-17-04-227.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Prescription of Drugs Ontology (PRDO)</td>
+              <td><a href="https://pdfs.semanticscholar.org/7100/59ad86c5c2ef7a5b1430d30a8950a88aa319.pdf">https://pdfs.semanticscholar.org/7100/59ad86c5c2ef7a5b1430d30a8950a88aa319.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Process and Observation Ontology (PO2)</td>
+              <td><a href="https://www.sciencedirect.com/science/article/abs/pii/S0958694619300032">https://www.sciencedirect.com/science/article/abs/pii/S0958694619300032</a></td>
+            </tr>
+            <tr>
+              <td>Product Life Cycle Ontology for Additive Manufacturing</td>
+              <td><a href="https://www.sciencedirect.com/science/article/pii/S0166361518301647">https://www.sciencedirect.com/science/article/pii/S0166361518301647</a></td>
+            </tr>
+            <tr>
+              <td>Product Service System (PSS) Ontology</td>
+              <td><a href="https://www.diversity-project.eu/wp-content/uploads/2017/07/Ontology-for-Colaborative-Development-of-Product-Service-Systems-Based-on-Basic-Formal-Ontology.pdf">https://www.diversity-project.eu/wp-content/uploads/2017/07/Ontology-for-Colaborative-Development-of-Product-Service-Systems-Based-on-Basic-Formal-Ontology.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Proper Name Ontology (PNO)</td>
+              <td><a href="https://code.google.com/p/proper-name-ontology">https://code.google.com/p/proper-name-ontology</a></td>
+            </tr>
+            <tr>
+              <td>Protein Ontology (PRO)</td>
+              <td><a href="http://obofoundry.org/ontology/pr.html">http://obofoundry.org/ontology/pr.html</a></td>
+            </tr>
+            <tr>
+              <td>Protein-Ligand Interaction Ontology (PLIO)</td>
+              <td><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3106195">http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3106195</a></td>
+            </tr>
+            <tr>
+              <td>Provenir ontology for provenance modeling</td>
+              <td><a href="http://cci.case.edu/cci/images/a/aa/Janus.pdf">http://cci.case.edu/cci/images/a/aa/Janus.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Public Safety and Emergency Management (PS/EM) Communications Ontology</td>
+              <td><a href="https://www.ida.org/-/media/feature/publications/p/pu/public-safety-and-emergency-management-communications-ontology/d-8583.ashx">https://www.ida.org/-/media/feature/publications/p/pu/public-safety-and-emergency-management-communications-ontology/d-8583.ashx</a></td>
+            </tr>
+            <tr>
+              <td>QROWD urban traffic and mobility ontology</td>
+              <td><a href="http://qrowd-project.trackglobe.es/wp-content/uploads/2019/11/D4.3-Linked-Data-Generation.docx.pdf">http://qrowd-project.trackglobe.es/wp-content/uploads/2019/11/D4.3-Linked-Data-Generation.docx.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Qualitative Spatiotemporal Reasoning Unit</td>
+              <td><a href="http://org.buffalo.edu/rarp/QSRUnit%20Page.html">http://org.buffalo.edu/rarp/QSRUnit%20Page.html</a></td>
+            </tr>
+            <tr>
+              <td>Quality of Service (QoS) Ontology</td>
+              <td><a href="http://www.waset.org/publications/10000168">http://www.waset.org/publications/10000168</a></td>
+            </tr>
+            <tr>
+              <td>REMINE</td>
+              <td><a href="http://www.ramit.be/index.cfm?objectid=D06D28B6-1143-DEB7-74B2690FF1EC5110">http://www.ramit.be/index.cfm?objectid=D06D28B6-1143-DEB7-74B2690FF1EC5110</a></td>
+            </tr>
+            <tr>
+              <td>RFID System Configuration Ontology (RFID SCO)</td>
+              <td><a href="https://doi.org/10.1017/S0269888921000096">https://doi.org/10.1017/S0269888921000096</a></td>
+            </tr>
+            <tr>
+              <td>RNA Ontology (RnaO)</td>
+              <td><a href="http://obofoundry.org/ontology/rnao.html">http://obofoundry.org/ontology/rnao.html</a></td>
+            </tr>
+            <tr>
+              <td>ROMAIN industrial maintenance ontology</td>
+              <td><a href="https://www.researchgate.net/publication/332390146_ROMAIN_Towards_a_BFO_compliant_reference_ontology_for_industrial_maintenance">https://www.researchgate.net/publication/332390146_ROMAIN_Towards_a_BFO_compliant_reference_ontology_for_industrial_maintenance</a></td>
+            </tr>
+            <tr>
+              <td>Referent Tracking Unit</td>
+              <td><a href="http://org.buffalo.edu/RTU/index.html">http://org.buffalo.edu/RTU/index.html</a></td>
+            </tr>
+            <tr>
+              <td>Relations Ontology (RO)</td>
+              <td><a href="http://www.obofoundry.org/ontology/ro.html">http://www.obofoundry.org/ontology/ro.html</a></td>
+            </tr>
+            <tr>
+              <td>Reliability Assessment for Assembly Stations (RAAS) Ontology</td>
+              <td><a href="https://infoscience.epfl.ch/record/265908/files/">https://infoscience.epfl.ch/record/265908/files/</a></td>
+            </tr>
+            <tr>
+              <td>Rescue Ontology (ResOnt)</td>
+              <td><a href="https://www.researchgate.net/profile/Samer-Chehade-2/publication/353571839">https://www.researchgate.net/profile/Samer-Chehade-2/publication/353571839</a></td>
+            </tr>
+            <tr>
+              <td>Rock Plastic Deformation (RPD) ontology</td>
+              <td><a href="http://www.sciencedirect.com/science/article/pii/S0098300416308482">http://www.sciencedirect.com/science/article/pii/S0098300416308482</a></td>
+            </tr>
+            <tr>
+              <td>Role Ontology (ROLEO)</td>
+              <td><a href="https://bioportal.bioontology.org/ontologies/ROLEO">https://bioportal.bioontology.org/ontologies/ROLEO</a></td>
+            </tr>
+            <tr>
+              <td>SAIC</td>
+              <td><a href="www.saic.com/">www.saic.com/</a></td>
+            </tr>
+            <tr>
+              <td>SMART Protocols</td>
+              <td><a href="http://vocab.linkeddata.es/SMARTProtocols">http://vocab.linkeddata.es/SMARTProtocols</a></td>
+            </tr>
+            <tr>
+              <td>SMART Protocols</td>
+              <td><a href="http://www.swat4ls.org/wp-content/uploads/2015/10/SWAT4LS_2015_paper_15.pdf">http://www.swat4ls.org/wp-content/uploads/2015/10/SWAT4LS_2015_paper_15.pdf</a></td>
+            </tr>
+            <tr>
+              <td>SNOMED CT (SCT) Standard Ontology</td>
+              <td><a href="https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-018-0651-5">https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-018-0651-5</a></td>
+            </tr>
+            <tr>
+              <td>STATO-LMM Linear Mixed Model Ontology</td>
+              <td><a href="https://www.nature.com/articles/s41597-020-0409-7">https://www.nature.com/articles/s41597-020-0409-7</a></td>
+            </tr>
+            <tr>
+              <td>Saitama University - Faculty of Liberal Arts</td>
+              <td><a href="http://www.saitama-u.ac.jp/">http://www.saitama-u.ac.jp/</a></td>
+            </tr>
+            <tr>
+              <td>Saliva Ontology (SALO)</td>
+              <td><a href="http://code.google.com/p/bodily/source/browse/trunk/src/ontology/salo.owl">http://code.google.com/p/bodily/source/browse/trunk/src/ontology/salo.owl</a></td>
+            </tr>
+            <tr>
+              <td>Schistosomiasis Process Ontology (IDOSCHISTO)</td>
+              <td><a href="http://ceur-ws.org/Vol-1747/IP01_ICBO2016.pdf">http://ceur-ws.org/Vol-1747/IP01_ICBO2016.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Science Applications International Corporation (SAIC)</td>
+              <td><a href="https://www.saic.com">https://www.saic.com</a></td>
+            </tr>
+            <tr>
+              <td>Science Commons</td>
+              <td><a href="http://www.sciencecommons.org/">http://www.sciencecommons.org/</a></td>
+            </tr>
+            <tr>
+              <td>Scientific Evidence and Provenance Information Ontology (SEPIO)</td>
+              <td><a href="http://ceur-ws.org/Vol-1747/IT605_ICBO2016.pdf">http://ceur-ws.org/Vol-1747/IT605_ICBO2016.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Securboration</td>
+              <td><a href="http://www.securboration.com/">http://www.securboration.com/</a></td>
+            </tr>
+            <tr>
+              <td>Semantic Electronic Health Record (SEHR) Model</td>
+              <td><a href="http://www.linked2safety-project.eu/node/44">http://www.linked2safety-project.eu/node/44</a></td>
+            </tr>
+            <tr>
+              <td>Semantic LAminated Composites Knowledge management System (SLACKS)</td>
+              <td><a href="http://dl.acm.org/citation.cfm?id=2580238">http://dl.acm.org/citation.cfm?id=2580238</a></td>
+            </tr>
+            <tr>
+              <td>Semantic Reference Model for Individualization of Information Processes</td>
+              <td><a href="https://www.mdpi.com/2079-9292/10/20/2523">https://www.mdpi.com/2079-9292/10/20/2523</a></td>
+            </tr>
+            <tr>
+              <td>Semantic Systems Engineering Ontology (SESO)</td>
+              <td><a href="https://indico.esa.int/event/386/contributions/6243/attachments/4281/6391/1435%20-%20using%20semantic%20systems%20engineering%20techniques%20to%20verify%20the%20large%20aperture%20space%20telescope%20mission%20%E2%80%93%20current%20status.pdf">https://indico.esa.int/event/386/contributions/6243/attachments/4281/6391/1435%20-%20using%20semantic%20systems%20engineering%20techniques%20to%20verify%20the%20large%20aperture%20space%20telescope%20mission%20%E2%80%93%20current%20status.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Semanticscience Integrated Ontology (SIO)</td>
+              <td><a href="http://code.google.com/p/semanticscience/wiki/SIO">http://code.google.com/p/semanticscience/wiki/SIO</a></td>
+            </tr>
+            <tr>
+              <td>Senselab Ontology</td>
+              <td><a href="http://www.ncbi.nlm.nih.gov/pubmed/20006477">http://www.ncbi.nlm.nih.gov/pubmed/20006477</a></td>
+            </tr>
+            <tr>
+              <td>Sentinel: Platform for Semantic Enrichment of Social Media Streams</td>
+              <td><a href="http://ieeexplore.ieee.org/document/8232468/">http://ieeexplore.ieee.org/document/8232468/</a></td>
+            </tr>
+            <tr>
+              <td>Sequence Ontology (SO)</td>
+              <td><a href="http://obofoundry.org/ontology/so.html">http://obofoundry.org/ontology/so.html</a></td>
+            </tr>
+            <tr>
+              <td>Shop-Floor Digital Twin (DT) ontology</td>
+              <td><a href="http://ceur-ws.org/Vol-2615/paper5.pdf">http://ceur-ws.org/Vol-2615/paper5.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Situated and Interactive Multimodal Conversations</td>
+              <td><a href="https://arxiv.org/pdf/2006.01460.pdf">https://arxiv.org/pdf/2006.01460.pdf </a></td>
+            </tr>
+            <tr>
+              <td>Situation Awareness Ontology (SAO)</td>
+              <td><a href="http://link.springer.com/article/10.1007/s10489-016-0834-7">http://link.springer.com/article/10.1007/s10489-016-0834-7</a></td>
+            </tr>
+            <tr>
+              <td>Skeletome</td>
+              <td><a href="http://itee.uq.edu.au/~eresearch/projects/skeletome">http://itee.uq.edu.au/~eresearch/projects/skeletome</a></td>
+            </tr>
+            <tr>
+              <td>Sketch Map Ontology</td>
+              <td><a href="https://www.tandfonline.com/doi/abs/10.1080/13658816.2017.1309043?journalCode=tgis20">https://www.tandfonline.com/doi/abs/10.1080/13658816.2017.1309043?journalCode=tgis20</a></td>
+            </tr>
+            <tr>
+              <td>Skin Physiology Ontology (SPO)</td>
+              <td><a href="https://bioportal.bioontology.org/ontologies/SPO">https://bioportal.bioontology.org/ontologies/SPO</a></td>
+            </tr>
+            <tr>
+              <td>Sleep Domain Ontology (SDO)</td>
+              <td><a href="http://bimib.disco.unimib.it/images/7/7c/SSFW09_Arabandi_SleepOntology.pdf">http://bimib.disco.unimib.it/images/7/7c/SSFW09_Arabandi_SleepOntology.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Smart Ultrasound in Obstetrics and Gynecology (SUOG) Ontology</td>
+              <td><a href="https://icbo2021.inf.unibz.it/wp-content/uploads/2021/09/169_S1_ElGhosh_paper_8.pdf">https://icbo2021.inf.unibz.it/wp-content/uploads/2021/09/169_S1_ElGhosh_paper_8.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Social Psychology Ontology (SPO)</td>
+              <td><a href="https://ubir.buffalo.edu/xmlui/handle/10477/79440">https://ubir.buffalo.edu/xmlui/handle/10477/79440</a></td>
+            </tr>
+            <tr>
+              <td>Software Ontology (SWO)</td>
+              <td><a href="http://jbiomedsem.biomedcentral.com/articles/10.1186/2041-1480-5-25">http://jbiomedsem.biomedcentral.com/articles/10.1186/2041-1480-5-25</a></td>
+            </tr>
+            <tr>
+              <td>Software, Disabilities and Competences Ontology (SODIC)</td>
+              <td><a href="http://dspace.ucuenca.edu.ec/bitstream/123456789/28548/1/Trabajo%20de%20Titulaci%C3%B3n.pdf">http://dspace.ucuenca.edu.ec/bitstream/123456789/28548/1/Trabajo%20de%20Titulaci%C3%B3n.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Space Domain Ontologies (SDO)</td>
+              <td><a href="https://philpapers.org/rec/COXTSD-2">https://philpapers.org/rec/COXTSD-2</a></td>
+            </tr>
+            <tr>
+              <td>Space Object Ontology (SOO)</td>
+              <td><a href="https://ieeexplore.ieee.org/document/7527882">https://ieeexplore.ieee.org/document/7527882</a></td>
+            </tr>
+            <tr>
+              <td>Spatial Graph Adapter (SGA) Ontology Design Pattern</td>
+              <td><a href="http://www.semantic-web-journal.net/system/files/swj1582.pdf">http://www.semantic-web-journal.net/system/files/swj1582.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Spatial Relation Ontology</td>
+              <td><a href="http://ceur-ws.org/Vol-2728/paper3.pdf">http://ceur-ws.org/Vol-2728/paper3.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Spatiotemporal Ontology for the Administrative Units of Switzerland (SONADUS)</td>
+              <td><a href="http://www.geo.uzh.ch/dam/jcr:6c3c9ef3-6bcd-4300-86e4-9de07d3f6f37/msc_felix_gantner_2011.pdf">http://www.geo.uzh.ch/dam/jcr:6c3c9ef3-6bcd-4300-86e4-9de07d3f6f37/msc_felix_gantner_2011.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Special Nuclear Materials Detection Ontology (SNM-DO)</td>
+              <td><a href="http://ceur-ws.org/Vol-808/STIDS2011_CR_P2_WardEtAl.pdf">http://ceur-ws.org/Vol-808/STIDS2011_CR_P2_WardEtAl.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Statistics Ontology (STATO)</td>
+              <td><a href="http://obofoundry.org/ontology/stato.html">http://obofoundry.org/ontology/stato.html</a></td>
+            </tr>
+            <tr>
+              <td>Subcellular Anatomy Ontology (SAO)</td>
+              <td><a href="http://obofoundry.org/ontology/sao.html">http://obofoundry.org/ontology/sao.html</a></td>
+            </tr>
+            <tr>
+              <td>Suggested Ontology for Pharmacogenomics (SO-Pharm)</td>
+              <td><a href="http://obofoundry.org/ontology/sopharm.html">http://obofoundry.org/ontology/sopharm.html</a></td>
+            </tr>
+            <tr>
+              <td>Supply Chain Traceability Ontology</td>
+              <td><a href="https://asmedigitalcollection.asme.org/computingengineering/article-abstract/22/5/051002/1139465/Enabling-Traceability-in-Agri-Food-Supply-Chains">https://asmedigitalcollection.asme.org/computingengineering/article-abstract/22/5/051002/1139465/Enabling-Traceability-in-Agri-Food-Supply-Chains</a></td>
+            </tr>
+            <tr>
+              <td>Surface Water Ontology (SWO)</td>
+              <td><a href="https://www.usgs.gov/media/files/surface-water-ontology">https://www.usgs.gov/media/files/surface-water-ontology</a></td>
+            </tr>
+            <tr>
+              <td>Survey Ontology</td>
+              <td><a href="https://www.scitepress.org/papers/2017/65827/65827.pdf">https://www.scitepress.org/papers/2017/65827/65827.pdf</a></td>
+            </tr>
+            <tr>
+              <td>TRADOC Operational Environment Center</td>
+              <td><a href="www.tradoc.army.mil/g2/oetsc/videoTBOC_flv.aspx">www.tradoc.army.mil/g2/oetsc/videoTBOC_flv.aspx</a></td>
+            </tr>
+            <tr>
+              <td>Taxonomy for Rehabilitation of Knee Conditions (TRAK)</td>
+              <td><a href="http://users.cs.cf.ac.uk/I.Spasic/trak">http://users.cs.cf.ac.uk/I.Spasic/trak</a></td>
+            </tr>
+            <tr>
+              <td>The Common Rule Ontology (CRO)</td>
+              <td><a href="https://github.com/CRO-ontology/CRO">https://github.com/CRO-ontology/CRO</a></td>
+            </tr>
+            <tr>
+              <td>The Trope Ontology</td>
+              <td><a href="https://www.mdpi.com/2409-9287/4/3/40">https://www.mdpi.com/2409-9287/4/3/40</a></td>
+            </tr>
+            <tr>
+              <td>Thermo Fisher Scientific</td>
+              <td><a href="https://www.thermofisher.com/us/en/home.html">https://www.thermofisher.com/us/en/home.html</a></td>
+            </tr>
+            <tr>
+              <td>Time Event Ontology (TEO)</td>
+              <td><a href="https://bioportal.bioontology.org/ontologies/TEO">https://bioportal.bioontology.org/ontologies/TEO</a></td>
+            </tr>
+            <tr>
+              <td>Toxic Process Ontology (TXPO)</td>
+              <td><a href="http://www.obofoundry.org/ontology/txpo.html">http://www.obofoundry.org/ontology/txpo.html</a></td>
+            </tr>
+            <tr>
+              <td>Trade-Space Analysis Tool for Constellations (TAT-C) ontology</td>
+              <td><a href="https://arc.aiaa.org/doi/abs/10.2514/6.2019-1032">https://arc.aiaa.org/doi/abs/10.2514/6.2019-1032</a></td>
+            </tr>
+            <tr>
+              <td>Traditional Chinese Drugs Ontology (TCDO)</td>
+              <td><a href="https://www.hindawi.com/journals/ecam/2021/6637810/">https://www.hindawi.com/journals/ecam/2021/6637810/</a></td>
+            </tr>
+            <tr>
+              <td>Translational Medicine Ontology (TMO)</td>
+              <td><a href="http://esw.w3.org/topic/HCLSIG/PharmaOntology">http://esw.w3.org/topic/HCLSIG/PharmaOntology</a></td>
+            </tr>
+            <tr>
+              <td>Transportation System Ontology</td>
+              <td><a href="http://www.ontobee.org/ontology/TSO">http://www.ontobee.org/ontology/TSO</a></td>
+            </tr>
+            <tr>
+              <td>Tumour-Node-Metastasis Ontology (TNM-O)</td>
+              <td><a href="https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-016-0106-9">https://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-016-0106-9</a></td>
+            </tr>
+            <tr>
+              <td>U.S. Geological Survey (USGS) - Center of Excellence for Geospatial Information Science (CEGIS)</td>
+              <td><a href="http://cegis.usgs.gov/ontology.html">http://cegis.usgs.gov/ontology.html</a></td>
+            </tr>
+            <tr>
+              <td>UMass Engineering Core Ontologies</td>
+              <td><a href="https://www.mdpi.com/2079-8954/6/4/46/pdf">https://www.mdpi.com/2079-8954/6/4/46/pdf</a></td>
+            </tr>
+            <tr>
+              <td>United Nations SDG (Sustainable Development Goals) Ontology Framework</td>
+              <td><a href="https://iswc2017.ai.wu.ac.at/wp-content/uploads/papers/MainProceedings/179.pdf">https://iswc2017.ai.wu.ac.at/wp-content/uploads/papers/MainProceedings/179.pdf</a></td>
+            </tr>
+            <tr>
+              <td>United Nations System Document Ontology (ONTO-UNDO)</td>
+              <td><a href="https://unsceb-hlcm.github.io/onto-undo/">https://unsceb-hlcm.github.io/onto-undo/</a></td>
+            </tr>
+            <tr>
+              <td>Universal Core Semantic Layer</td>
+              <td><a href="http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-555/paper5.pdf">http://sunsite.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-555/paper5.pdf</a></td>
+            </tr>
+            <tr>
+              <td>University of Arkansas, Biomedical Informatics, Medical Center, Little Rock</td>
+              <td><a href="http://www.uams.edu/cctr/infocore/infocore.asp">http://www.uams.edu/cctr/infocore/infocore.asp</a></td>
+            </tr>
+            <tr>
+              <td>University of Augsburg - Computer Science - Software Methodologies for Distributed Systems</td>
+              <td><a href="http://www.informatik.uni-augsburg.de/en/chairs/swt/ds">http://www.informatik.uni-augsburg.de/en/chairs/swt/ds</a></td>
+            </tr>
+            <tr>
+              <td>University of South Alabama - School of Computing - South Biomedical Informatics (SBI) Research Group</td>
+              <td><a href="http://biomedical.cis.usouthal.edu/">http://biomedical.cis.usouthal.edu/</a></td>
+            </tr>
+            <tr>
+              <td>University of Texas Southwestern Medical Center</td>
+              <td><a href="http://www.utsouthwestern.edu/">http://www.utsouthwestern.edu/</a></td>
+            </tr>
+            <tr>
+              <td>University of Washington - Structural Informatics Group (SIG)</td>
+              <td><a href="http://sig.biostr.washington.edu/">http://sig.biostr.washington.edu/</a></td>
+            </tr>
+            <tr>
+              <td>VIVO</td>
+              <td><a href="http://vivoweb.org/">http://vivoweb.org/</a></td>
+            </tr>
+            <tr>
+              <td>VIVO Ontology</td>
+              <td><a href="https://openreview.net/forum?id=SkgyVa-coV">https://openreview.net/forum?id=SkgyVa-coV</a></td>
+            </tr>
+            <tr>
+              <td>Vaccination Informed Consent Ontology (VICO)</td>
+              <td><a href="http://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-016-0062-4">http://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-016-0062-4</a></td>
+            </tr>
+            <tr>
+              <td>Vaccine Ontology (VO)</td>
+              <td><a href="http://obofoundry.org/ontology/vo.html">http://obofoundry.org/ontology/vo.html</a></td>
+            </tr>
+            <tr>
+              <td>Value Stream Mapping (VSM) Ontology</td>
+              <td><a href="https://era.library.ualberta.ca/items/5ad997be-0f3d-4456-8108-b3c69d851a98/view/060e801a-92a5-44ac-ba8a-0a00ab22765e/Abdelghani_Mohammad_202101_PhD.pdf">https://era.library.ualberta.ca/items/5ad997be-0f3d-4456-8108-b3c69d851a98/view/060e801a-92a5-44ac-ba8a-0a00ab22765e/Abdelghani_Mohammad_202101_PhD.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Virus Pathogen Resource (ViPR)</td>
+              <td><a href="http://www.viprbrc.org/brc/home.do?decorator=vipr">http://www.viprbrc.org/brc/home.do?decorator=vipr</a></td>
+            </tr>
+            <tr>
+              <td>Visualized Emotion Ontology (VEO)</td>
+              <td><a href="https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-018-0634-6">https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/s12911-018-0634-6</a></td>
+            </tr>
+            <tr>
+              <td>Vital Sign Ontology (VSO)</td>
+              <td><a href="http://ontology.buffalo.edu/smith/articles/Vital_Sign_Ontology.pdf">http://ontology.buffalo.edu/smith/articles/Vital_Sign_Ontology.pdf</a></td>
+            </tr>
+            <tr>
+              <td>Volcanism Ontology (VO)</td>
+              <td><a href="https://scholarworks.gsu.edu/cgi/viewcontent.cgi?article=1124&amp;context=geosciences_theses">https://scholarworks.gsu.edu/cgi/viewcontent.cgi?article=1124&amp;context=geosciences_theses</a></td>
+            </tr>
+            <tr>
+              <td>Volcanism Ontology (VO)</td>
+              <td><a href="https://scholarworks.gsu.edu/cgi/viewcontent.cgi?article=1124&amp;context=geosciences_theses">https://scholarworks.gsu.edu/cgi/viewcontent.cgi?article=1124&amp;context=geosciences_theses</a></td>
+            </tr>
+            <tr>
+              <td>Volley: AI-powered learning hub</td>
+              <td><a href="http://volley.com/">http://volley.com/</a></td>
+            </tr>
+            <tr>
+              <td>Xenopus Anatomy Ontology (XAO)</td>
+              <td><a href="http://obofoundry.org/ontology/xao.html">http://obofoundry.org/ontology/xao.html</a></td>
+            </tr>
+            <tr>
+              <td>Xenopus Phenotype Ontology (XPO)</td>
+              <td><a href="https://www.biorxiv.org/content/biorxiv/early/2021/11/13/2021.11.12.467727.full.pdf">https://www.biorxiv.org/content/biorxiv/early/2021/11/13/2021.11.12.467727.full.pdf</a></td>
+            </tr>
+            <tr>
+              <td>ZEMELA Intelligent Agriculture Platform</td>
+              <td><a href="https://ieeexplore.ieee.org/abstract/document/9627248">https://ieeexplore.ieee.org/abstract/document/9627248</a></td>
+            </tr>
+            <tr>
+              <td>eNanoMapper</td>
+              <td><a href="http://www.enanomapper.net/">http://www.enanomapper.net/</a></td>
+            </tr>
+            <tr>
+              <td>eXtended Formal Ontology (XFO)</td>
+              <td><a href="https://www.researchgate.net/profile/Robert_Allen5/publication/325141757_XFO_Toward_Programming_Rich_Semantic_Models/links/5afa473d458515c00b6bd24f/XFO-Toward-Programming-Rich-Semantic-Models.pdf?origin=publication_detail">https://www.researchgate.net/profile/Robert_Allen5/publication/325141757_XFO_Toward_Programming_Rich_Semantic_Models/links/5afa473d458515c00b6bd24f/XFO-Toward-Programming-Rich-Semantic-Models.pdf?origin=publication_detail</a></td>
+            </tr>
+            <tr>
+              <td>eagle-i Research Resource Ontology</td>
+              <td><a href="http://obofoundry.org/ontology/ero.html">http://obofoundry.org/ontology/ero.html</a></td>
+            </tr>
+            <tr>
+              <td>libryo</td>
+              <td><a href="https://libryo.com/">https://libryo.com/</a></td>
+            </tr>
+            <tr>
+              <td>miRNAO</td>
+              <td><a href="http://iwbbio.ugr.es/2014/papers/IWBBIO_2014_paper_103.pdf">http://iwbbio.ugr.es/2014/papers/IWBBIO_2014_paper_103.pdf</a></td>
+            </tr>
+            <tr>
+              <td>openEHR</td>
+              <td><a href="http://www.openehr.org/wiki/display/ontol/Ontologies+Home">http://www.openehr.org/wiki/display/ontol/Ontologies+Home</a></td>
+            </tr>
+            <tr>
+              <td>uc_Eating</td>
+              <td><a href="https://github.com/IC-FOODS/uc_Eating">https://github.com/IC-FOODS/uc_Eating</a></td>
+            </tr>
+            <tr>
+              <td>uc_FoodDrugInteractionOntology</td>
+              <td><a href="https://github.com/IC-FOODS/uc_FoodDrugInteractionOntology">https://github.com/IC-FOODS/uc_FoodDrugInteractionOntology</a></td>
+            </tr>
+            <tr>
+              <td>uc_Milk</td>
+              <td><a href="https://github.com/IC-FOODS/uc_Milk">https://github.com/IC-FOODS/uc_Milk</a></td>
+            </tr>
+            <tr>
+              <td>uc_Processing</td>
+              <td><a href="https://github.com/IC-FOODS/uc_Processing">https://github.com/IC-FOODS/uc_Processing</a></td>
+            </tr>
+            <tr>
+              <td>uc_Sense</td>
+              <td><a href="https://github.com/IC-FOODS/uc_Sense">https://github.com/IC-FOODS/uc_Sense</a></td>
+            </tr>
+            <tr>
+              <td>yOWL</td>
+              <td><a href="http://www2007.org/workshops/paper_130.pdf">http://www2007.org/workshops/paper_130.pdf</a></td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+        <br>
+        <br>
+        <div id = "groups">
+          <h1>Instituions/Groups/Projects</h1>
+        </div>
+        <br>
         <ol>
           <li>
             <a href="http://www.wpafb.af.mil/afrl">
