@@ -51,7 +51,12 @@ function displayDataSet(dataSetPath) {
             // remove this line after testing
             console.log("Raw data", dataSetString);
 
-            let dataSet = csvStringToArray(dataSetString);
+            // handle csv or json
+            var parseFunction = JSON.parse;
+            if (dataSetString.includes("csv")) {
+                parseFunction = csvStringToArray;
+            }
+            let dataSet = parseFunction(dataSetString);
 
             // remove this line after testing
             console.log("Parsed data", dataSet);
