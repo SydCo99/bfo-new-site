@@ -133,6 +133,7 @@ h6 {
 */
 .navbar {
   padding: 0;
+  
 }
 
 .navbar ul {
@@ -156,7 +157,7 @@ h6 {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #4f5a62;
+  color: white;
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -172,7 +173,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #3498db;
+  color: white;
 }
 
 .navbar .dropdown ul {
