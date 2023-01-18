@@ -1097,6 +1097,9 @@ table.dataTable tr.dtrg-level-0 td {
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
+.team {
+  background: #f7fbfe;
+}
 .team .member {
   text-align: center;
   margin-bottom: 10px;
@@ -1355,7 +1358,7 @@ table.dataTable tr.dtrg-level-0 td {
 #footer {
   color: #444444;
   font-size: 14px;
-  background: #f7fbfe;
+  background: #fff;
 }
 
 #footer .footer-top {
