@@ -155,11 +155,28 @@ h6 {
   justify-content: space-between;
   padding: 10px 0 10px 30px;
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   color: white;
   white-space: nowrap;
   transition: 0.3s;
+}
+
+.navbar-custom {
+  height: 5px;
+  padding-top: 0px;
+  
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar {
+   height: 100px !important; 
+  }
+}
+@media only screen and (min-width: 768px) {
+  .navbar {
+   height: 120px !important; 
+ } 
 }
 
 .navbar a i,
@@ -557,7 +574,7 @@ section {
 .about ul {
   list-style: none;
   padding: 0;
-  font-size: 15px;
+  font-size: 10px;
 }
 
 .about ul li+li {
@@ -596,6 +613,7 @@ section {
   font-size: 15px;
   color: #848484;
 }
+
 
 /*--------------------------------------------------------------
 # Skills
@@ -638,15 +656,15 @@ section {
 --------------------------------------------------------------*/
 .counts {
   background: white;
-  padding: 0px 0 20px 0;
+  padding: 0px 0 0px 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .counts .count-box {
-  padding: 30px 30px 25px 30px;
-  width: 100%;
+  padding: 0px 30px 30px 10px;
+  width: auto;
   text-align: center;
   background: #fff;
   margin-left: auto;
@@ -654,20 +672,19 @@ section {
 }
 
 .counts .count-box i {
-  position: absolute;
-  top: -25px;
-  left: 50%;
-  transform: translateX(-50%);
+
+  
+
   font-size: 20px;
   background: #3498db;
-  padding: 12px;
+  padding: 5px;
   color: #fff;
   border-radius: 50px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 30%;
+  height: 70%;
 }
 
 .counts .count-box span {
@@ -689,7 +706,7 @@ section {
 --------------------------------------------------------------*/
 
 .services {
-  padding: 60px;
+  padding: 0px;
 }
 .services .icon-box {
   padding: 15px;
@@ -1036,15 +1053,18 @@ section {
   background-color: #3498db;
 }
 
+table.datatable {
+  width:"device-width"
+}
 
 table.dataTable td {
-  font-size: 0.9em;
+  font-size: 0.7em;
   padding: 4px 8px 4px 8px;
   font-family: "Open Sans", sans-serif;
 }
 
 table.dataTable tr.dtrg-level-0 td {
-  font-size: 0.9em;
+  font-size: 0.7em;
   padding: 4px 8px 4px 8px;
   font-family: "Open Sans", sans-serif;
   
@@ -1090,7 +1110,7 @@ table.dataTable tr.dtrg-level-0 td {
   height: 50%;
   border-radius: 30%;
   margin: 0 0 40px 0;
-  size: 400px;
+  size: auto;
 }
 
 .team .member h4 {
@@ -1113,7 +1133,7 @@ table.dataTable tr.dtrg-level-0 td {
 }
 
 .team .member .social {
-  margin-top: 15px;
+  margin-top: 0px;
 }
 
 .team .member .social a {

@@ -51,13 +51,15 @@
   <style>
     .tableFixHead {
       overflow-y: auto; /* make the table scrollable if height is more than 200 px  */
-      height: 500px; /* gives an initial height of 200px to the table */
+      height: 400px; /* gives an initial height of 200px to the table */
+      width: "device-width"
     }
     .tableFixHead thead th {
       position: sticky; /* make the table heads sticky */
       top: 0px; /* table head will be placed from the top of the table and sticks to it */
       background-color: #3498db;
       color: white;
+      font-size: 14px;
     }
     table {
       border-collapse: collapse; /* make the table borders collapse to each other */
@@ -67,6 +69,7 @@
     td {
       padding: 8px 16px;
       border: 1px solid #ccc;
+      font-size: 14px;
     }
     th {
       background: #eee;
@@ -105,17 +108,17 @@
     <!-- ======= Portfolio Section ======= -->
 
     <section id="users" class="users">
-      <div class="container">
+      <div class="container" width = "device-width">
 
         <div class="section-title">
           <br>
           <br>
-          <h2>Users</h2>
-          <p>Below you will find ontologies and institutions & groups using BFO, sorted alphabetically.</p>
+          <h2 style = "font-size: 28px">Users</h2>
+          <p style = "font-size: 14px">Below you will find ontologies and institutions & groups using BFO, sorted alphabetically.</p>
         </div>
 
         <div id = "ontologies">
-          <h1>Ontologies</h1>
+          <h3 style = "font-size: 24px">Ontologies</h3>
         </div>
 
         <div class = "tableFixHead" id = "user-table">
@@ -1958,11 +1961,11 @@
         <br>
         <br>
         <div id = "groups">
-          <h1>Instituions/Groups/Projects</h1>
+          <h3 style = "font-size: 24px">Instituions/Groups/Projects</h3>
         </div>
         <br>
-        <div style=" margin: auto; width: 60%;">
-          <ol style="padding-top: 9px; overflow:scroll; height: 500px; border-style:solid; border-color:darkgray; border-width: 1px; width: 800px; text-align: center; list-style-position: inside;">
+        <div style=" margin: auto; width: device-width; align-content: center;">
+          <ol style="padding-top: 9px; overflow:scroll; height: 400px; border-style:solid; border-color:darkgray; border-width: 1px; width: device-width; text-align: center; list-style-position: inside;">
             <li>
               <a href="http://www.wpafb.af.mil/afrl">
               Air Force Research Laboratory, Rome, New York
@@ -2361,7 +2364,7 @@
     </div>
     <br>
     <div class="social-links text-center text-md-right pt-3 pt-md-2 ">
-      <h6 style="margin-left: 20px; margin-top:10px;">Last Updated On: 01/16/23</h6>
+      <h6 style="margin-left: 20px; margin-top:10px; font-size: 13px">Last Updated On: 01/16/23</h6>
     </div>
   </div>
 
