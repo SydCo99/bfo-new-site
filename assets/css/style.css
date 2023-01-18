@@ -706,7 +706,7 @@ section {
 --------------------------------------------------------------*/
 
 .services {
-  padding: 0px;
+  padding-top: 20px;
 }
 .services .icon-box {
   padding: 15px;
